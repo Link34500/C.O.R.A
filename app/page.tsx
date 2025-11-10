@@ -1,5 +1,5 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  return <Link href="/admin/">Panel Admin</Link>;
+  return <Button>BOnjour</Button>;
 }

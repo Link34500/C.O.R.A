@@ -3,7 +3,7 @@ import { AdminSidebar } from "@/components/AdminSidebar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="flex flex-row-reverse">
       <AdminSidebar title="Administration" />
       <SidebarTrigger />
       <main>{children}</main>
