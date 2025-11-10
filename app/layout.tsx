@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BirdTrack - Chants résonants",
+  title: "BirdTrack",
   description: "Projet de lycéen sur l'étude des oiseau de la forêt guyanaise",
 };
 
@@ -25,19 +25,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
       >
-        <header>Navbar</header>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
+          <header>Navbar</header>
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
