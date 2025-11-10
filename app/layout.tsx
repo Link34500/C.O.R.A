@@ -31,6 +31,7 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
+        <header>Navbar</header>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
         >
