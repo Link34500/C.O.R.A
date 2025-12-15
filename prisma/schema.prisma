@@ -22,7 +22,7 @@ model Article {
 }
 
 model Bird {
-  id Int @id
+  id Int @id @default(autoincrement())
   name String
   scientificName String?
   imageUrl String?

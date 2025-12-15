@@ -9,7 +9,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-type BirdWithLocation = Bird & { location?: Location | null };
+export type BirdWithLocation = Bird & { location?: Location | null };
 
 export default function InteractiveCard({
   birds,

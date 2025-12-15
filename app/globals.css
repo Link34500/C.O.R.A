@@ -2,3 +2,12 @@
 @plugin "daisyui" {
   themes: forest --default, forest --prefersdark, forest;
 }
+
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}

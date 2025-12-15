@@ -7,7 +7,7 @@ import { PropsWithChildren } from "react";
 const navLinks = [
   { label: "Acceuil", href: "/" },
   { label: "Nos articles", href: "/articles" },
-  { label: "Nos données", href: "/donnees" },
+  { label: "Nos données", href: "/birds" },
 ];
 
 const footerSections = [
@@ -16,11 +16,11 @@ const footerSections = [
     links: [
       {
         label: "Présentation de C.O.R.A",
-        href: "/a-propos",
+        href: "#presentation",
       },
       {
         label: "Notre objectif",
-        href: "/objectif",
+        href: "#objectif",
       },
       {
         label: "FAQ",

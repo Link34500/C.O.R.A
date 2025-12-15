@@ -301,7 +301,6 @@ export type BirdScalarWhereWithAggregatesInput = {
 }
 
 export type BirdCreateInput = {
-  id: number
   name: string
   scientificName?: string | null
   imageUrl?: string | null
@@ -313,7 +312,7 @@ export type BirdCreateInput = {
 }
 
 export type BirdUncheckedCreateInput = {
-  id: number
+  id?: number
   name: string
   scientificName?: string | null
   imageUrl?: string | null
@@ -325,7 +324,6 @@ export type BirdUncheckedCreateInput = {
 }
 
 export type BirdUpdateInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -349,7 +347,7 @@ export type BirdUncheckedUpdateInput = {
 }
 
 export type BirdCreateManyInput = {
-  id: number
+  id?: number
   name: string
   scientificName?: string | null
   imageUrl?: string | null
@@ -360,7 +358,6 @@ export type BirdCreateManyInput = {
 }
 
 export type BirdUpdateManyMutationInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -450,7 +447,6 @@ export type BirdUpdateOneRequiredWithoutLocationNestedInput = {
 }
 
 export type BirdCreateWithoutLocationInput = {
-  id: number
   name: string
   scientificName?: string | null
   imageUrl?: string | null
@@ -461,7 +457,7 @@ export type BirdCreateWithoutLocationInput = {
 }
 
 export type BirdUncheckedCreateWithoutLocationInput = {
-  id: number
+  id?: number
   name: string
   scientificName?: string | null
   imageUrl?: string | null
@@ -488,7 +484,6 @@ export type BirdUpdateToOneWithWhereWithoutLocationInput = {
 }
 
 export type BirdUpdateWithoutLocationInput = {
-  id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
