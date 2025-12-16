@@ -10,7 +10,7 @@ export default function SearchBar({
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (query.trim() === "") {
+    if (query === "") {
       onResults(null);
       return;
     }

@@ -63,7 +63,7 @@ const footerSections = [
 export default async function Layout({ children }: PropsWithChildren) {
   const user = await getUser();
   const navButtons = [
-    { href: "/", children: "Nos articles" },
+    { href: "/articles", children: "Nos articles" },
     user && {
       href: "/admin",
       children: "Mon dashboard",

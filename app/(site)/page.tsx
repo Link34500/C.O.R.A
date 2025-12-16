@@ -1,6 +1,3 @@
-import { Button } from "@/components/ui/Button";
-import InteractiveCard from "@/components/shared/InteractiveCard";
-import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import HeroSection from "@/components/features/site/HeroSection";
 import ObjectiveSection from "@/components/features/site/ObjectiveSection";
@@ -9,7 +6,6 @@ import ProtocolSection from "@/components/features/site/ProtocolSection";
 import StepsSection from "@/components/features/site/StepsSection";
 import CurrentStageSection from "@/components/features/site/CurrentStageSection";
 import ArticleSection from "@/components/features/site/ArticleSection";
-import { Bird } from "lucide-react";
 import BirdSoundSection from "@/components/features/site/BirdSoundSection";
 
 export default async function HomePage() {
@@ -28,7 +24,7 @@ export default async function HomePage() {
     {
       title: "Installer le capteur acoustique",
       description:
-        "Un capteur acoustique semi-autonome (Audio-Moth) est ensuite installé sur le terrain d'étude. Pendant 1h à 2h puis est récupérer pour extraire les données enregistrées.",
+        "Un capteur acoustique semi-autonome (Audio-Moth) est ensuite installé sur le terrain d'étude. Pendant 3h-4h puis est récupérer pour extraire les données enregistrées, puis répeter l'opération plusieurs fois par jours environ 10heures par jour.",
     },
     {
       title: "Traitemment des données",

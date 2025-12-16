@@ -8,8 +8,6 @@ const connectionString = `${process.env.DATABASE_URL}`;
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 async function main() {
-  // Chemin absolu vers le fichier JSON
-
   for (const bird of birds) {
     await prisma.bird.upsert({
       where: { id: 10000 },

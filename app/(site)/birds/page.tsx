@@ -6,29 +6,18 @@ import React, { useEffect, useState, useRef } from "react";
 
 export default function Birds() {
   const [birds, setBirds] = useState<BirdWithLocation[]>([]);
-  const [skip, setSkip] = useState(0);
   const [loading, setLoading] = useState(false);
   const loader = useRef<HTMLDivElement | null>(null);
   const [searchResults, setSearchResults] = useState<BirdWithLocation[] | null>(
     null
   );
   const fetchBirds = async () => {
-    const res = await fetch(`/api/birds?skip=${skip}&take=20`);
+    const res = await fetch(`/api/birds?skip=${birds.length}&take=10`);
     const data = await res.json();
-    setBirds((prev) => {
-      // Ajoute seulement les oiseaux qui n’existent pas déjà
-      const existingIds = new Set(prev.map((b) => b.id));
-      const newBirds = data.filter(
-        (b: BirdWithLocation) => !existingIds.has(b.id)
-      );
-      return [...prev, ...newBirds];
-    });
-    setSkip((prev) => prev + 20);
+    setBirds((prev) => [...prev, ...data]);
+
     setLoading(false);
   };
-  useEffect(() => {
-    fetchBirds();
-  }, []);
 
   useEffect(() => {
     if (!loader.current) return;
@@ -38,7 +27,7 @@ export default function Birds() {
           setLoading(true);
           setTimeout(() => {
             fetchBirds();
-          }, 1000);
+          }, 500);
         }
       },
       { threshold: 1 }
@@ -46,11 +35,12 @@ export default function Birds() {
     observer.observe(loader.current);
     return () => observer.disconnect();
   }, [loader, loading]);
+  console.log(searchResults);
   return (
     <section className="py-16 bg-base-100 flex flex-col justify-center items-center">
       <SearchBar onResults={setSearchResults} />
       <div className="flex gap-5 flex-wrap justify-center">
-        {(searchResults ? searchResults : birds).map((bird) => (
+        {(searchResults ?? birds).map((bird) => (
           <BirdCard key={bird.id} bird={bird} />
         ))}
       </div>
