@@ -82,6 +82,7 @@ export const ArticleScalarFieldEnum = {
   title: 'title',
   content: 'content',
   published: 'published',
+  thumbnailUrl: 'thumbnailUrl',
   date: 'date',
   updateAt: 'updateAt'
 } as const
@@ -94,7 +95,6 @@ export const BirdScalarFieldEnum = {
   name: 'name',
   scientificName: 'scientificName',
   imageUrl: 'imageUrl',
-  gepogAudioUrl: 'gepogAudioUrl',
   description: 'description',
   date: 'date'
 } as const
@@ -115,7 +115,8 @@ export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typ
 export const RecordScalarFieldEnum = {
   id: 'id',
   url: 'url',
-  birdId: 'birdId'
+  birdId: 'birdId',
+  source: 'source'
 } as const
 
 export type RecordScalarFieldEnum = (typeof RecordScalarFieldEnum)[keyof typeof RecordScalarFieldEnum]

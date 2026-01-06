@@ -1,30 +1,36 @@
 import "dotenv/config";
-import { PrismaClient } from "../generated/prisma/client";
+import { PrismaClient, Source } from "../generated/prisma/client"; // Import de Source
 import { PrismaPg } from "@prisma/adapter-pg";
-import * as birds from "./bird_data.json";
+import pg from "pg";
+import birdsData from "./bird_data.json";
 
 const connectionString = `${process.env.DATABASE_URL}`;
 
-const adapter = new PrismaPg({ connectionString });
+const pool = new pg.Pool({ connectionString });
+const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
+
 async function main() {
-  for (const bird of birds) {
-    await prisma.bird.upsert({
-      where: { id: 10000 },
-      update: {
-        scientificName: bird.scientificName,
-        gepogAudioUrl: bird.gepogAudioUrl,
-        imageUrl: bird.imageUrl,
-      },
-      create: {
+  console.log("Début de l'importation...");
+
+  for (const bird of birdsData) {
+    await prisma.bird.create({
+      data: {
         name: bird.name,
         scientificName: bird.scientificName,
-        gepogAudioUrl: bird.gepogAudioUrl,
-        imageUrl: bird.imageUrl,
+        imageUrl: bird.imageUrl || null,
+        // On crée le Record lié directement ici
+        records: {
+          create: {
+            url: bird.gepogAudioUrl,
+            source: Source.GEPOG, // Utilisation de l'Enum
+          },
+        },
       },
     });
   }
-  console.log("Import terminé !");
+
+  console.log(`Import terminé ! ${birdsData.length} oiseaux importés.`);
 }
 
 main()

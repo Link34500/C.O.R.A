@@ -39,6 +39,7 @@ export type ArticleMinAggregateOutputType = {
   title: string | null
   content: string | null
   published: boolean | null
+  thumbnailUrl: string | null
   date: Date | null
   updateAt: Date | null
 }
@@ -48,6 +49,7 @@ export type ArticleMaxAggregateOutputType = {
   title: string | null
   content: string | null
   published: boolean | null
+  thumbnailUrl: string | null
   date: Date | null
   updateAt: Date | null
 }
@@ -57,6 +59,7 @@ export type ArticleCountAggregateOutputType = {
   title: number
   content: number
   published: number
+  thumbnailUrl: number
   date: number
   updateAt: number
   _all: number
@@ -76,6 +79,7 @@ export type ArticleMinAggregateInputType = {
   title?: true
   content?: true
   published?: true
+  thumbnailUrl?: true
   date?: true
   updateAt?: true
 }
@@ -85,6 +89,7 @@ export type ArticleMaxAggregateInputType = {
   title?: true
   content?: true
   published?: true
+  thumbnailUrl?: true
   date?: true
   updateAt?: true
 }
@@ -94,6 +99,7 @@ export type ArticleCountAggregateInputType = {
   title?: true
   content?: true
   published?: true
+  thumbnailUrl?: true
   date?: true
   updateAt?: true
   _all?: true
@@ -190,6 +196,7 @@ export type ArticleGroupByOutputType = {
   title: string
   content: string
   published: boolean
+  thumbnailUrl: string | null
   date: Date
   updateAt: Date
   _count: ArticleCountAggregateOutputType | null
@@ -222,6 +229,7 @@ export type ArticleWhereInput = {
   title?: Prisma.StringFilter<"Article"> | string
   content?: Prisma.StringFilter<"Article"> | string
   published?: Prisma.BoolFilter<"Article"> | boolean
+  thumbnailUrl?: Prisma.StringNullableFilter<"Article"> | string | null
   date?: Prisma.DateTimeFilter<"Article"> | Date | string
   updateAt?: Prisma.DateTimeFilter<"Article"> | Date | string
 }
@@ -231,6 +239,7 @@ export type ArticleOrderByWithRelationInput = {
   title?: Prisma.SortOrder
   content?: Prisma.SortOrder
   published?: Prisma.SortOrder
+  thumbnailUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   date?: Prisma.SortOrder
   updateAt?: Prisma.SortOrder
 }
@@ -243,6 +252,7 @@ export type ArticleWhereUniqueInput = Prisma.AtLeast<{
   title?: Prisma.StringFilter<"Article"> | string
   content?: Prisma.StringFilter<"Article"> | string
   published?: Prisma.BoolFilter<"Article"> | boolean
+  thumbnailUrl?: Prisma.StringNullableFilter<"Article"> | string | null
   date?: Prisma.DateTimeFilter<"Article"> | Date | string
   updateAt?: Prisma.DateTimeFilter<"Article"> | Date | string
 }, "id">
@@ -252,6 +262,7 @@ export type ArticleOrderByWithAggregationInput = {
   title?: Prisma.SortOrder
   content?: Prisma.SortOrder
   published?: Prisma.SortOrder
+  thumbnailUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   date?: Prisma.SortOrder
   updateAt?: Prisma.SortOrder
   _count?: Prisma.ArticleCountOrderByAggregateInput
@@ -269,6 +280,7 @@ export type ArticleScalarWhereWithAggregatesInput = {
   title?: Prisma.StringWithAggregatesFilter<"Article"> | string
   content?: Prisma.StringWithAggregatesFilter<"Article"> | string
   published?: Prisma.BoolWithAggregatesFilter<"Article"> | boolean
+  thumbnailUrl?: Prisma.StringNullableWithAggregatesFilter<"Article"> | string | null
   date?: Prisma.DateTimeWithAggregatesFilter<"Article"> | Date | string
   updateAt?: Prisma.DateTimeWithAggregatesFilter<"Article"> | Date | string
 }
@@ -277,6 +289,7 @@ export type ArticleCreateInput = {
   title: string
   content: string
   published?: boolean
+  thumbnailUrl?: string | null
   date?: Date | string
   updateAt?: Date | string
 }
@@ -286,6 +299,7 @@ export type ArticleUncheckedCreateInput = {
   title: string
   content: string
   published?: boolean
+  thumbnailUrl?: string | null
   date?: Date | string
   updateAt?: Date | string
 }
@@ -294,6 +308,7 @@ export type ArticleUpdateInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   content?: Prisma.StringFieldUpdateOperationsInput | string
   published?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  thumbnailUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -303,6 +318,7 @@ export type ArticleUncheckedUpdateInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   content?: Prisma.StringFieldUpdateOperationsInput | string
   published?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  thumbnailUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -312,6 +328,7 @@ export type ArticleCreateManyInput = {
   title: string
   content: string
   published?: boolean
+  thumbnailUrl?: string | null
   date?: Date | string
   updateAt?: Date | string
 }
@@ -320,6 +337,7 @@ export type ArticleUpdateManyMutationInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   content?: Prisma.StringFieldUpdateOperationsInput | string
   published?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  thumbnailUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -329,6 +347,7 @@ export type ArticleUncheckedUpdateManyInput = {
   title?: Prisma.StringFieldUpdateOperationsInput | string
   content?: Prisma.StringFieldUpdateOperationsInput | string
   published?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  thumbnailUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updateAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
@@ -338,6 +357,7 @@ export type ArticleCountOrderByAggregateInput = {
   title?: Prisma.SortOrder
   content?: Prisma.SortOrder
   published?: Prisma.SortOrder
+  thumbnailUrl?: Prisma.SortOrder
   date?: Prisma.SortOrder
   updateAt?: Prisma.SortOrder
 }
@@ -351,6 +371,7 @@ export type ArticleMaxOrderByAggregateInput = {
   title?: Prisma.SortOrder
   content?: Prisma.SortOrder
   published?: Prisma.SortOrder
+  thumbnailUrl?: Prisma.SortOrder
   date?: Prisma.SortOrder
   updateAt?: Prisma.SortOrder
 }
@@ -360,6 +381,7 @@ export type ArticleMinOrderByAggregateInput = {
   title?: Prisma.SortOrder
   content?: Prisma.SortOrder
   published?: Prisma.SortOrder
+  thumbnailUrl?: Prisma.SortOrder
   date?: Prisma.SortOrder
   updateAt?: Prisma.SortOrder
 }
@@ -374,6 +396,10 @@ export type StringFieldUpdateOperationsInput = {
 
 export type BoolFieldUpdateOperationsInput = {
   set?: boolean
+}
+
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
 }
 
 export type DateTimeFieldUpdateOperationsInput = {
@@ -395,6 +421,7 @@ export type ArticleSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   title?: boolean
   content?: boolean
   published?: boolean
+  thumbnailUrl?: boolean
   date?: boolean
   updateAt?: boolean
 }, ExtArgs["result"]["article"]>
@@ -404,6 +431,7 @@ export type ArticleSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   title?: boolean
   content?: boolean
   published?: boolean
+  thumbnailUrl?: boolean
   date?: boolean
   updateAt?: boolean
 }, ExtArgs["result"]["article"]>
@@ -413,6 +441,7 @@ export type ArticleSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   title?: boolean
   content?: boolean
   published?: boolean
+  thumbnailUrl?: boolean
   date?: boolean
   updateAt?: boolean
 }, ExtArgs["result"]["article"]>
@@ -422,11 +451,12 @@ export type ArticleSelectScalar = {
   title?: boolean
   content?: boolean
   published?: boolean
+  thumbnailUrl?: boolean
   date?: boolean
   updateAt?: boolean
 }
 
-export type ArticleOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "content" | "published" | "date" | "updateAt", ExtArgs["result"]["article"]>
+export type ArticleOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "content" | "published" | "thumbnailUrl" | "date" | "updateAt", ExtArgs["result"]["article"]>
 
 export type $ArticlePayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Article"
@@ -436,6 +466,7 @@ export type $ArticlePayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     title: string
     content: string
     published: boolean
+    thumbnailUrl: string | null
     date: Date
     updateAt: Date
   }, ExtArgs["result"]["article"]>
@@ -865,6 +896,7 @@ export interface ArticleFieldRefs {
   readonly title: Prisma.FieldRef<"Article", 'String'>
   readonly content: Prisma.FieldRef<"Article", 'String'>
   readonly published: Prisma.FieldRef<"Article", 'Boolean'>
+  readonly thumbnailUrl: Prisma.FieldRef<"Article", 'String'>
   readonly date: Prisma.FieldRef<"Article", 'DateTime'>
   readonly updateAt: Prisma.FieldRef<"Article", 'DateTime'>
 }

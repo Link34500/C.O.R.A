@@ -1047,6 +1047,7 @@ export const ArticleScalarFieldEnum = {
   title: 'title',
   content: 'content',
   published: 'published',
+  thumbnailUrl: 'thumbnailUrl',
   date: 'date',
   updateAt: 'updateAt'
 } as const
@@ -1059,7 +1060,6 @@ export const BirdScalarFieldEnum = {
   name: 'name',
   scientificName: 'scientificName',
   imageUrl: 'imageUrl',
-  gepogAudioUrl: 'gepogAudioUrl',
   description: 'description',
   date: 'date'
 } as const
@@ -1080,7 +1080,8 @@ export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typ
 export const RecordScalarFieldEnum = {
   id: 'id',
   url: 'url',
-  birdId: 'birdId'
+  birdId: 'birdId',
+  source: 'source'
 } as const
 
 export type RecordScalarFieldEnum = (typeof RecordScalarFieldEnum)[keyof typeof RecordScalarFieldEnum]
@@ -1235,6 +1236,20 @@ export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, '
  * Reference to a field of type 'Float[]'
  */
 export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
+    
+
+
+/**
+ * Reference to a field of type 'Source'
+ */
+export type EnumSourceFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Source'>
+    
+
+
+/**
+ * Reference to a field of type 'Source[]'
+ */
+export type ListEnumSourceFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Source[]'>
     
 
 /**

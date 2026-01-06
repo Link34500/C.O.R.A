@@ -40,18 +40,21 @@ export type RecordMinAggregateOutputType = {
   id: number | null
   url: string | null
   birdId: number | null
+  source: $Enums.Source | null
 }
 
 export type RecordMaxAggregateOutputType = {
   id: number | null
   url: string | null
   birdId: number | null
+  source: $Enums.Source | null
 }
 
 export type RecordCountAggregateOutputType = {
   id: number
   url: number
   birdId: number
+  source: number
   _all: number
 }
 
@@ -70,18 +73,21 @@ export type RecordMinAggregateInputType = {
   id?: true
   url?: true
   birdId?: true
+  source?: true
 }
 
 export type RecordMaxAggregateInputType = {
   id?: true
   url?: true
   birdId?: true
+  source?: true
 }
 
 export type RecordCountAggregateInputType = {
   id?: true
   url?: true
   birdId?: true
+  source?: true
   _all?: true
 }
 
@@ -175,6 +181,7 @@ export type RecordGroupByOutputType = {
   id: number
   url: string
   birdId: number
+  source: $Enums.Source
   _count: RecordCountAggregateOutputType | null
   _avg: RecordAvgAggregateOutputType | null
   _sum: RecordSumAggregateOutputType | null
@@ -204,6 +211,7 @@ export type RecordWhereInput = {
   id?: Prisma.IntFilter<"Record"> | number
   url?: Prisma.StringFilter<"Record"> | string
   birdId?: Prisma.IntFilter<"Record"> | number
+  source?: Prisma.EnumSourceFilter<"Record"> | $Enums.Source
   bird?: Prisma.XOR<Prisma.BirdScalarRelationFilter, Prisma.BirdWhereInput>
 }
 
@@ -211,6 +219,7 @@ export type RecordOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   url?: Prisma.SortOrder
   birdId?: Prisma.SortOrder
+  source?: Prisma.SortOrder
   bird?: Prisma.BirdOrderByWithRelationInput
 }
 
@@ -221,6 +230,7 @@ export type RecordWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.RecordWhereInput | Prisma.RecordWhereInput[]
   url?: Prisma.StringFilter<"Record"> | string
   birdId?: Prisma.IntFilter<"Record"> | number
+  source?: Prisma.EnumSourceFilter<"Record"> | $Enums.Source
   bird?: Prisma.XOR<Prisma.BirdScalarRelationFilter, Prisma.BirdWhereInput>
 }, "id">
 
@@ -228,6 +238,7 @@ export type RecordOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   url?: Prisma.SortOrder
   birdId?: Prisma.SortOrder
+  source?: Prisma.SortOrder
   _count?: Prisma.RecordCountOrderByAggregateInput
   _avg?: Prisma.RecordAvgOrderByAggregateInput
   _max?: Prisma.RecordMaxOrderByAggregateInput
@@ -242,44 +253,52 @@ export type RecordScalarWhereWithAggregatesInput = {
   id?: Prisma.IntWithAggregatesFilter<"Record"> | number
   url?: Prisma.StringWithAggregatesFilter<"Record"> | string
   birdId?: Prisma.IntWithAggregatesFilter<"Record"> | number
+  source?: Prisma.EnumSourceWithAggregatesFilter<"Record"> | $Enums.Source
 }
 
 export type RecordCreateInput = {
   url: string
-  bird: Prisma.BirdCreateNestedOneWithoutCoraAudiosInput
+  source: $Enums.Source
+  bird: Prisma.BirdCreateNestedOneWithoutRecordsInput
 }
 
 export type RecordUncheckedCreateInput = {
   id?: number
   url: string
   birdId: number
+  source: $Enums.Source
 }
 
 export type RecordUpdateInput = {
   url?: Prisma.StringFieldUpdateOperationsInput | string
-  bird?: Prisma.BirdUpdateOneRequiredWithoutCoraAudiosNestedInput
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
+  bird?: Prisma.BirdUpdateOneRequiredWithoutRecordsNestedInput
 }
 
 export type RecordUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   url?: Prisma.StringFieldUpdateOperationsInput | string
   birdId?: Prisma.IntFieldUpdateOperationsInput | number
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 export type RecordCreateManyInput = {
   id?: number
   url: string
   birdId: number
+  source: $Enums.Source
 }
 
 export type RecordUpdateManyMutationInput = {
   url?: Prisma.StringFieldUpdateOperationsInput | string
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 export type RecordUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   url?: Prisma.StringFieldUpdateOperationsInput | string
   birdId?: Prisma.IntFieldUpdateOperationsInput | number
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 export type RecordListRelationFilter = {
@@ -296,6 +315,7 @@ export type RecordCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   url?: Prisma.SortOrder
   birdId?: Prisma.SortOrder
+  source?: Prisma.SortOrder
 }
 
 export type RecordAvgOrderByAggregateInput = {
@@ -307,12 +327,14 @@ export type RecordMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   url?: Prisma.SortOrder
   birdId?: Prisma.SortOrder
+  source?: Prisma.SortOrder
 }
 
 export type RecordMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   url?: Prisma.SortOrder
   birdId?: Prisma.SortOrder
+  source?: Prisma.SortOrder
 }
 
 export type RecordSumOrderByAggregateInput = {
@@ -362,13 +384,19 @@ export type RecordUncheckedUpdateManyWithoutBirdNestedInput = {
   deleteMany?: Prisma.RecordScalarWhereInput | Prisma.RecordScalarWhereInput[]
 }
 
+export type EnumSourceFieldUpdateOperationsInput = {
+  set?: $Enums.Source
+}
+
 export type RecordCreateWithoutBirdInput = {
   url: string
+  source: $Enums.Source
 }
 
 export type RecordUncheckedCreateWithoutBirdInput = {
   id?: number
   url: string
+  source: $Enums.Source
 }
 
 export type RecordCreateOrConnectWithoutBirdInput = {
@@ -404,25 +432,30 @@ export type RecordScalarWhereInput = {
   id?: Prisma.IntFilter<"Record"> | number
   url?: Prisma.StringFilter<"Record"> | string
   birdId?: Prisma.IntFilter<"Record"> | number
+  source?: Prisma.EnumSourceFilter<"Record"> | $Enums.Source
 }
 
 export type RecordCreateManyBirdInput = {
   id?: number
   url: string
+  source: $Enums.Source
 }
 
 export type RecordUpdateWithoutBirdInput = {
   url?: Prisma.StringFieldUpdateOperationsInput | string
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 export type RecordUncheckedUpdateWithoutBirdInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   url?: Prisma.StringFieldUpdateOperationsInput | string
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 export type RecordUncheckedUpdateManyWithoutBirdInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   url?: Prisma.StringFieldUpdateOperationsInput | string
+  source?: Prisma.EnumSourceFieldUpdateOperationsInput | $Enums.Source
 }
 
 
@@ -431,6 +464,7 @@ export type RecordSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs =
   id?: boolean
   url?: boolean
   birdId?: boolean
+  source?: boolean
   bird?: boolean | Prisma.BirdDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["record"]>
 
@@ -438,6 +472,7 @@ export type RecordSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extens
   id?: boolean
   url?: boolean
   birdId?: boolean
+  source?: boolean
   bird?: boolean | Prisma.BirdDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["record"]>
 
@@ -445,6 +480,7 @@ export type RecordSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extens
   id?: boolean
   url?: boolean
   birdId?: boolean
+  source?: boolean
   bird?: boolean | Prisma.BirdDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["record"]>
 
@@ -452,9 +488,10 @@ export type RecordSelectScalar = {
   id?: boolean
   url?: boolean
   birdId?: boolean
+  source?: boolean
 }
 
-export type RecordOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "url" | "birdId", ExtArgs["result"]["record"]>
+export type RecordOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "url" | "birdId" | "source", ExtArgs["result"]["record"]>
 export type RecordInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   bird?: boolean | Prisma.BirdDefaultArgs<ExtArgs>
 }
@@ -474,6 +511,7 @@ export type $RecordPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs
     id: number
     url: string
     birdId: number
+    source: $Enums.Source
   }, ExtArgs["result"]["record"]>
   composites: {}
 }
@@ -901,6 +939,7 @@ export interface RecordFieldRefs {
   readonly id: Prisma.FieldRef<"Record", 'Int'>
   readonly url: Prisma.FieldRef<"Record", 'String'>
   readonly birdId: Prisma.FieldRef<"Record", 'Int'>
+  readonly source: Prisma.FieldRef<"Record", 'Source'>
 }
     
 

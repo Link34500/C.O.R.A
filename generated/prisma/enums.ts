@@ -9,7 +9,9 @@
 * 🟢 You can import this file directly.
 */
 
+export const Source = {
+  GEPOG: 'GEPOG',
+  CORA: 'CORA'
+} as const
 
-
-// This file is empty because there are no enums in the schema.
-export {}
+export type Source = (typeof Source)[keyof typeof Source]
