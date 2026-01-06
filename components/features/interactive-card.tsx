@@ -1,5 +1,5 @@
 "use client";
-import { Bird, Location } from "@/generated/prisma/client";
+import { Bird, Location, Record } from "@/generated/prisma/client";
 import {
   GoogleMap,
   InfoWindow,
@@ -9,7 +9,9 @@ import {
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export type BirdWithLocation = Bird & { location?: Location | null };
+export type BirdWithLocation = Bird & { location?: Location | null } & {
+  records?: Record[];
+};
 
 export default function InteractiveCard({
   birds,

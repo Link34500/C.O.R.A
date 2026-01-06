@@ -1,19 +1,17 @@
 import "dotenv/config";
-import { PrismaClient, Source } from "../generated/prisma/client"; // Import de Source
+import { PrismaClient } from "../generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
-import pg from "pg";
-import birdsData from "./bird_data.json";
+import * as birds from "./bird_data.json";
 
 const connectionString = `${process.env.DATABASE_URL}`;
 
-const pool = new pg.Pool({ connectionString });
-const adapter = new PrismaPg(pool);
+const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
   console.log("Début de l'importation...");
 
-  for (const bird of birdsData) {
+  for (const bird of birds) {
     await prisma.bird.create({
       data: {
         name: bird.name,
@@ -23,14 +21,14 @@ async function main() {
         records: {
           create: {
             url: bird.gepogAudioUrl,
-            source: Source.GEPOG, // Utilisation de l'Enum
+            source: "GEPOG", // Utilisation de l'Enum
           },
         },
       },
     });
   }
 
-  console.log(`Import terminé ! ${birdsData.length} oiseaux importés.`);
+  console.log(`Import terminé ! ${birds.length} oiseaux importés.`);
 }
 
 main()

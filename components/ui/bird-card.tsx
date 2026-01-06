@@ -42,12 +42,12 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
   }, []);
 
   const playSound = () => {
-    if (!bird.gepogAudioUrl) return;
+    if (!bird.records) return;
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-    audioRef.current = new Audio(bird.gepogAudioUrl);
+    audioRef.current = new Audio(bird.records[0].url);
     audioRef.current.play();
   };
 
@@ -90,7 +90,7 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
           )}
         </div>
         <CardActions className={cn(!isBig && "mt-2")}>
-          <Button onClick={playSound} disabled={!bird.gepogAudioUrl}>
+          <Button onClick={playSound} disabled={!bird.records}>
             Écouter le chant
           </Button>
         </CardActions>
