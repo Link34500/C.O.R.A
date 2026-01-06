@@ -1,8 +1,8 @@
 import { getUser } from "@/lib/auth-server";
 import { redirect, unauthorized } from "next/navigation";
 import { PropsWithChildren } from "react";
-import Navbar from "@/components/features/admin/Navbar";
-import Sidebar from "@/components/features/admin/Sidebar";
+import Navbar from "@/components/layout/admin-navbar";
+import Sidebar from "@/components/layout/admin-sidebar";
 import { FileIcon, HomeIcon, TextIcon } from "lucide-react";
 import { User } from "@/generated/prisma/client";
 import {
@@ -53,7 +53,7 @@ export const sidebarLinks = [
 export default async function Layout({ children }: PropsWithChildren) {
   const user = await getUser();
   if (!user) {
-    redirect("/");
+    redirect("/admin/login");
   }
   if (!user.isActive) {
     return unauthorized();
@@ -63,7 +63,7 @@ export default async function Layout({ children }: PropsWithChildren) {
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         <Navbar />
-        <div className="p-4">{children}</div>
+        <div className="p-8 flex flex-col">{children}</div>
       </div>
 
       <Sidebar sidebarLinks={sidebarLinks} user={user as User} />

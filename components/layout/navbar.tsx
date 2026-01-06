@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { Button, type ButtonProps } from "@/components/ui/Button";
+import { Button, type ButtonProps } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import cn from "@/lib/cn";
 import { MenuIcon, XIcon } from "lucide-react";

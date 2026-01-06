@@ -33,6 +33,11 @@ export type Bird = Prisma.BirdModel
  */
 export type Location = Prisma.LocationModel
 /**
+ * Model Record
+ * 
+ */
+export type Record = Prisma.RecordModel
+/**
  * Model User
  * 
  */

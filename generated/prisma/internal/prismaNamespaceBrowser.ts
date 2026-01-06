@@ -54,6 +54,7 @@ export const ModelName = {
   Article: 'Article',
   Bird: 'Bird',
   Location: 'Location',
+  Record: 'Record',
   User: 'User',
   Session: 'Session',
   Account: 'Account',
@@ -80,6 +81,7 @@ export const ArticleScalarFieldEnum = {
   id: 'id',
   title: 'title',
   content: 'content',
+  published: 'published',
   date: 'date',
   updateAt: 'updateAt'
 } as const
@@ -92,7 +94,6 @@ export const BirdScalarFieldEnum = {
   name: 'name',
   scientificName: 'scientificName',
   imageUrl: 'imageUrl',
-  coraAudioUrl: 'coraAudioUrl',
   gepogAudioUrl: 'gepogAudioUrl',
   description: 'description',
   date: 'date'
@@ -109,6 +110,15 @@ export const LocationScalarFieldEnum = {
 } as const
 
 export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typeof LocationScalarFieldEnum]
+
+
+export const RecordScalarFieldEnum = {
+  id: 'id',
+  url: 'url',
+  birdId: 'birdId'
+} as const
+
+export type RecordScalarFieldEnum = (typeof RecordScalarFieldEnum)[keyof typeof RecordScalarFieldEnum]
 
 
 export const UserScalarFieldEnum = {

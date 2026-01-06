@@ -1,6 +1,6 @@
-import { Footer } from "@/components/shared/Footer";
-import { Navbar } from "@/components/shared/Navbar";
-import { ButtonProps } from "@/components/ui/Button";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
+import { ButtonProps } from "@/components/ui/button";
 import { getUser } from "@/lib/auth-server";
 import { PropsWithChildren } from "react";
 

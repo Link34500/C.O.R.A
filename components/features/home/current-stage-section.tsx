@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -54,10 +55,16 @@ export default function CurrentStageSection() {
             </motion.li>
           </motion.ul>
           <motion.p variants={fadeInUp}>
-            La phase d'analyse des données terrain débutera suite à
-            l'acquisition des premiers enregistrements. Les résultats seront
-            publiés progressivement sur la plateforme au fur et à mesure de leur
-            validation.
+            La phase d'analyse des données terrain débutera après l'acquisition
+            des premiers enregistrements. Un algorithme de classification (ML)
+            sera développé pour identifier les espèces d'oiseaux et ses
+            résultats seront publiés sur le site. Le taux de reconnaissance
+            attendu est relativement faible pour l'instant, autour de 30 à 50 %
+            pour le modèle finalisé.
+          </motion.p>
+          <motion.p variants={fadeInUp}>
+            Les résultats seront publiés progressivement sur la plateforme au
+            fur et à mesure de leur validation.
           </motion.p>
         </motion.div>
       </div>

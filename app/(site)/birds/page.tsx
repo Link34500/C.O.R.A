@@ -1,56 +1,71 @@
 "use client";
-import SearchBar from "@/components/features/birds/SearchBar";
-import { BirdCard } from "@/components/shared/BirdCard";
-import { BirdWithLocation } from "@/components/shared/InteractiveCard";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
+import SearchBar from "@/components/features/birds/search-bar";
+import { BirdCard } from "@/components/ui/bird-card";
+import { BirdWithLocation } from "@/components/features/interactive-card";
 
 export default function Birds() {
   const [birds, setBirds] = useState<BirdWithLocation[]>([]);
   const [loading, setLoading] = useState(false);
-  const loader = useRef<HTMLDivElement | null>(null);
   const [searchResults, setSearchResults] = useState<BirdWithLocation[] | null>(
     null
   );
-  const fetchBirds = async () => {
-    const res = await fetch(`/api/birds?skip=${birds.length}&take=10`);
-    const data = await res.json();
-    setBirds((prev) => [...prev, ...data]);
 
-    setLoading(false);
-  };
+  const hasMore = useRef(true);
+  const loaderRef = useRef<HTMLDivElement | null>(null);
+
+  // Utilisation de useCallback pour stabiliser la fonction
+  const fetchBirds = useCallback(async () => {
+    if (loading || !hasMore.current) return;
+
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/birds?skip=${birds.length}&take=10`);
+      const data = await res.json();
+
+      if (data.length === 0) {
+        hasMore.current = false;
+      } else {
+        setBirds((prev) => [...prev, ...data]);
+      }
+    } finally {
+      setLoading(false);
+    }
+  }, [birds.length, loading]);
 
   useEffect(() => {
-    if (!loader.current) return;
+    const target = loaderRef.current;
+    if (!target || searchResults) return;
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !loading) {
-          setLoading(true);
-          setTimeout(() => {
-            fetchBirds();
-          }, 500);
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          fetchBirds();
         }
       },
-      { threshold: 1 }
-    );
-    observer.observe(loader.current);
+      { threshold: 0.1 }
+    ); // 0.1 est plus réactif que 1.0
+
+    observer.observe(target);
     return () => observer.disconnect();
-  }, [loader, loading]);
-  console.log(searchResults);
+  }, [fetchBirds, searchResults]);
+
   return (
-    <section className="py-16 bg-base-100 flex flex-col justify-center items-center">
+    <section className="py-16 bg-base-100 flex flex-col items-center gap-8">
       <SearchBar onResults={setSearchResults} />
+
       <div className="flex gap-5 flex-wrap justify-center">
-        {(searchResults ?? birds).map((bird) => (
+        {(searchResults || birds).map((bird) => (
           <BirdCard key={bird.id} bird={bird} />
         ))}
       </div>
-      {!searchResults && (
-        <>
-          <div ref={loader} />
+
+      {!searchResults && hasMore.current && (
+        <div ref={loaderRef} className="h-10 flex justify-center">
           {loading && (
             <span className="loading loading-spinner loading-xl"></span>
           )}
-        </>
+        </div>
       )}
     </section>
   );

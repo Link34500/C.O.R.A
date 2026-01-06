@@ -1,12 +1,15 @@
 import { prisma } from "@/lib/prisma";
-import HeroSection from "@/components/features/site/HeroSection";
-import ObjectiveSection from "@/components/features/site/ObjectiveSection";
-import PartenersSection from "@/components/features/site/PartenersSection";
-import ProtocolSection from "@/components/features/site/ProtocolSection";
-import StepsSection from "@/components/features/site/StepsSection";
-import CurrentStageSection from "@/components/features/site/CurrentStageSection";
-import ArticleSection from "@/components/features/site/ArticleSection";
-import BirdSoundSection from "@/components/features/site/BirdSoundSection";
+import HeroSection from "@/components/features/home/hero-section";
+import ObjectiveSection from "@/components/features/home/objective-section";
+import PartenersSection from "@/components/features/home/parteners-section";
+import ProtocolSection from "@/components/features/home/protocol-section";
+import StepsSection from "@/components/features/home/steps-section";
+import CurrentStageSection from "@/components/features/home/current-stage-section";
+import ArticleSection from "@/components/features/home/article-section";
+import BirdSoundSection from "@/components/features/home/birdsound-section";
+import ApplicationAndImpactSection from "@/components/features/home/application-and-impacts-section";
+import LimitsSection from "@/components/features/home/limits-section";
+import PerspectiveSection from "@/components/features/home/perspectives-section";
 
 export default async function HomePage() {
   const birdSounds = await prisma.bird.findMany({
@@ -17,71 +20,37 @@ export default async function HomePage() {
 
   const protocolSteps = [
     {
-      title: "Choisir le terrain d'étude",
+      title: "Choix du terrain d’étude",
       description:
-        "Nous avons choisie comme terrain d'étude le terrain de Vidal et le Sentier de Montabo qui sont deux zones fortes en biodiversité en Guyane.",
+        "Les enregistrements sont réalisés sur les sites de Vidal et du sentier de Montabo, deux zones présentant une biodiversité intéressante en Guyane et adaptées à l’observation acoustique des oiseaux.",
     },
     {
-      title: "Installer le capteur acoustique",
+      title: "Collecte des enregistrements",
       description:
-        "Un capteur acoustique semi-autonome (Audio-Moth) est ensuite installé sur le terrain d'étude. Pendant 3h-4h puis est récupérer pour extraire les données enregistrées, puis répeter l'opération plusieurs fois par jours environ 10heures par jour.",
+        "Un capteur acoustique semi-autonome (AudioMoth) est installé sur le terrain afin d’enregistrer les sons ambiants sur plusieurs plages horaires au cours de la journée.",
     },
     {
-      title: "Traitemment des données",
+      title: "Analyse acoustique",
       description:
-        "Nous collectons ensuite les données fournies par le capteur acoustiques, on les nettoies en enlevant les bruits de fond et les blancs ensuite on effectue l'analyse des différents chants en comparant par la base de données fournies par GEPOG. On retrouve l'espèce et on l'identifie avec ses caractéristiques.",
+        "Les enregistrements sont traités pour isoler les chants d’oiseaux. Les signaux obtenus sont ensuite comparés à des données de référence, notamment celles du GEPOG, afin de proposer une identification des espèces.",
     },
     {
-      title: "Publication des données sur le site",
+      title: "Mise en ligne des résultats",
       description:
-        "Nous publions ensuite les données sur le site web avec les données sur les oiseaux leurs chants et luer position de là où nous avons effectuer les enregistremments",
+        "Les espèces identifiées et leurs enregistrements associés sont intégrés au site web du projet et visualisés sur une carte interactive.",
     },
   ];
 
   const steps = [
-    {
-      title: "Protocole",
-      completed: true,
-    },
-    {
-      title: "Site web",
-      completed: true,
-    },
-    {
-      title: "Matériel",
-      completed: false,
-    },
-    {
-      title: "Écoute à Vidal",
-      completed: false,
-    },
-    {
-      title: "Écoute à Montabo",
-      completed: false,
-    },
-    {
-      title: "Analyse",
-      completed: false,
-    },
-    {
-      title: "Publication",
-      completed: false,
-    },
+    { title: "Protocole", completed: true },
+    { title: "Site web", completed: true },
+    { title: "Matériel", completed: false },
+    { title: "Vidal", completed: false },
+    { title: "Montabo", completed: false },
+    { title: "Analyse", completed: false },
+    { title: "Exploitation", completed: false },
+    { title: "Publication", completed: false },
   ];
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 },
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   return (
     <>
@@ -96,7 +65,9 @@ export default async function HomePage() {
       <StepsSection steps={steps} />
 
       <CurrentStageSection />
-
+      <ApplicationAndImpactSection />
+      <LimitsSection />
+      <PerspectiveSection />
       <ArticleSection />
 
       <BirdSoundSection birdSounds={birdSounds} />

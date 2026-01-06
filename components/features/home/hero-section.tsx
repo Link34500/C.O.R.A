@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -12,14 +13,6 @@ export default function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.span
-            className="badge badge-primary p-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            📣 Ouverture du site !
-          </motion.span>
           <div>
             <motion.h1
               className="text-5xl font-bold"
@@ -44,7 +37,9 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <Button>En savoir plus</Button>
+            <Link className="btn btn-primary" href="#objectif">
+              En savoir plus
+            </Link>
           </motion.div>
         </motion.div>
       </div>

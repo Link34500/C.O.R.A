@@ -39,7 +39,6 @@ export type BirdMinAggregateOutputType = {
   name: string | null
   scientificName: string | null
   imageUrl: string | null
-  coraAudioUrl: string | null
   gepogAudioUrl: string | null
   description: string | null
   date: Date | null
@@ -50,7 +49,6 @@ export type BirdMaxAggregateOutputType = {
   name: string | null
   scientificName: string | null
   imageUrl: string | null
-  coraAudioUrl: string | null
   gepogAudioUrl: string | null
   description: string | null
   date: Date | null
@@ -61,7 +59,6 @@ export type BirdCountAggregateOutputType = {
   name: number
   scientificName: number
   imageUrl: number
-  coraAudioUrl: number
   gepogAudioUrl: number
   description: number
   date: number
@@ -82,7 +79,6 @@ export type BirdMinAggregateInputType = {
   name?: true
   scientificName?: true
   imageUrl?: true
-  coraAudioUrl?: true
   gepogAudioUrl?: true
   description?: true
   date?: true
@@ -93,7 +89,6 @@ export type BirdMaxAggregateInputType = {
   name?: true
   scientificName?: true
   imageUrl?: true
-  coraAudioUrl?: true
   gepogAudioUrl?: true
   description?: true
   date?: true
@@ -104,7 +99,6 @@ export type BirdCountAggregateInputType = {
   name?: true
   scientificName?: true
   imageUrl?: true
-  coraAudioUrl?: true
   gepogAudioUrl?: true
   description?: true
   date?: true
@@ -202,7 +196,6 @@ export type BirdGroupByOutputType = {
   name: string
   scientificName: string | null
   imageUrl: string | null
-  coraAudioUrl: string | null
   gepogAudioUrl: string | null
   description: string | null
   date: Date | null
@@ -236,10 +229,10 @@ export type BirdWhereInput = {
   name?: Prisma.StringFilter<"Bird"> | string
   scientificName?: Prisma.StringNullableFilter<"Bird"> | string | null
   imageUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
-  coraAudioUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
   gepogAudioUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
   description?: Prisma.StringNullableFilter<"Bird"> | string | null
   date?: Prisma.DateTimeNullableFilter<"Bird"> | Date | string | null
+  coraAudios?: Prisma.RecordListRelationFilter
   location?: Prisma.XOR<Prisma.LocationNullableScalarRelationFilter, Prisma.LocationWhereInput> | null
 }
 
@@ -248,10 +241,10 @@ export type BirdOrderByWithRelationInput = {
   name?: Prisma.SortOrder
   scientificName?: Prisma.SortOrderInput | Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  coraAudioUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   gepogAudioUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   date?: Prisma.SortOrderInput | Prisma.SortOrder
+  coraAudios?: Prisma.RecordOrderByRelationAggregateInput
   location?: Prisma.LocationOrderByWithRelationInput
 }
 
@@ -263,10 +256,10 @@ export type BirdWhereUniqueInput = Prisma.AtLeast<{
   name?: Prisma.StringFilter<"Bird"> | string
   scientificName?: Prisma.StringNullableFilter<"Bird"> | string | null
   imageUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
-  coraAudioUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
   gepogAudioUrl?: Prisma.StringNullableFilter<"Bird"> | string | null
   description?: Prisma.StringNullableFilter<"Bird"> | string | null
   date?: Prisma.DateTimeNullableFilter<"Bird"> | Date | string | null
+  coraAudios?: Prisma.RecordListRelationFilter
   location?: Prisma.XOR<Prisma.LocationNullableScalarRelationFilter, Prisma.LocationWhereInput> | null
 }, "id">
 
@@ -275,7 +268,6 @@ export type BirdOrderByWithAggregationInput = {
   name?: Prisma.SortOrder
   scientificName?: Prisma.SortOrderInput | Prisma.SortOrder
   imageUrl?: Prisma.SortOrderInput | Prisma.SortOrder
-  coraAudioUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   gepogAudioUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   description?: Prisma.SortOrderInput | Prisma.SortOrder
   date?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -294,7 +286,6 @@ export type BirdScalarWhereWithAggregatesInput = {
   name?: Prisma.StringWithAggregatesFilter<"Bird"> | string
   scientificName?: Prisma.StringNullableWithAggregatesFilter<"Bird"> | string | null
   imageUrl?: Prisma.StringNullableWithAggregatesFilter<"Bird"> | string | null
-  coraAudioUrl?: Prisma.StringNullableWithAggregatesFilter<"Bird"> | string | null
   gepogAudioUrl?: Prisma.StringNullableWithAggregatesFilter<"Bird"> | string | null
   description?: Prisma.StringNullableWithAggregatesFilter<"Bird"> | string | null
   date?: Prisma.DateTimeNullableWithAggregatesFilter<"Bird"> | Date | string | null
@@ -304,10 +295,10 @@ export type BirdCreateInput = {
   name: string
   scientificName?: string | null
   imageUrl?: string | null
-  coraAudioUrl?: string | null
   gepogAudioUrl?: string | null
   description?: string | null
   date?: Date | string | null
+  coraAudios?: Prisma.RecordCreateNestedManyWithoutBirdInput
   location?: Prisma.LocationCreateNestedOneWithoutBirdInput
 }
 
@@ -316,10 +307,10 @@ export type BirdUncheckedCreateInput = {
   name: string
   scientificName?: string | null
   imageUrl?: string | null
-  coraAudioUrl?: string | null
   gepogAudioUrl?: string | null
   description?: string | null
   date?: Date | string | null
+  coraAudios?: Prisma.RecordUncheckedCreateNestedManyWithoutBirdInput
   location?: Prisma.LocationUncheckedCreateNestedOneWithoutBirdInput
 }
 
@@ -327,10 +318,10 @@ export type BirdUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  coraAudios?: Prisma.RecordUpdateManyWithoutBirdNestedInput
   location?: Prisma.LocationUpdateOneWithoutBirdNestedInput
 }
 
@@ -339,10 +330,10 @@ export type BirdUncheckedUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  coraAudios?: Prisma.RecordUncheckedUpdateManyWithoutBirdNestedInput
   location?: Prisma.LocationUncheckedUpdateOneWithoutBirdNestedInput
 }
 
@@ -351,7 +342,6 @@ export type BirdCreateManyInput = {
   name: string
   scientificName?: string | null
   imageUrl?: string | null
-  coraAudioUrl?: string | null
   gepogAudioUrl?: string | null
   description?: string | null
   date?: Date | string | null
@@ -361,7 +351,6 @@ export type BirdUpdateManyMutationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -372,7 +361,6 @@ export type BirdUncheckedUpdateManyInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
@@ -383,7 +371,6 @@ export type BirdCountOrderByAggregateInput = {
   name?: Prisma.SortOrder
   scientificName?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
-  coraAudioUrl?: Prisma.SortOrder
   gepogAudioUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
   date?: Prisma.SortOrder
@@ -398,7 +385,6 @@ export type BirdMaxOrderByAggregateInput = {
   name?: Prisma.SortOrder
   scientificName?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
-  coraAudioUrl?: Prisma.SortOrder
   gepogAudioUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
   date?: Prisma.SortOrder
@@ -409,7 +395,6 @@ export type BirdMinOrderByAggregateInput = {
   name?: Prisma.SortOrder
   scientificName?: Prisma.SortOrder
   imageUrl?: Prisma.SortOrder
-  coraAudioUrl?: Prisma.SortOrder
   gepogAudioUrl?: Prisma.SortOrder
   description?: Prisma.SortOrder
   date?: Prisma.SortOrder
@@ -446,14 +431,28 @@ export type BirdUpdateOneRequiredWithoutLocationNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.BirdUpdateToOneWithWhereWithoutLocationInput, Prisma.BirdUpdateWithoutLocationInput>, Prisma.BirdUncheckedUpdateWithoutLocationInput>
 }
 
+export type BirdCreateNestedOneWithoutCoraAudiosInput = {
+  create?: Prisma.XOR<Prisma.BirdCreateWithoutCoraAudiosInput, Prisma.BirdUncheckedCreateWithoutCoraAudiosInput>
+  connectOrCreate?: Prisma.BirdCreateOrConnectWithoutCoraAudiosInput
+  connect?: Prisma.BirdWhereUniqueInput
+}
+
+export type BirdUpdateOneRequiredWithoutCoraAudiosNestedInput = {
+  create?: Prisma.XOR<Prisma.BirdCreateWithoutCoraAudiosInput, Prisma.BirdUncheckedCreateWithoutCoraAudiosInput>
+  connectOrCreate?: Prisma.BirdCreateOrConnectWithoutCoraAudiosInput
+  upsert?: Prisma.BirdUpsertWithoutCoraAudiosInput
+  connect?: Prisma.BirdWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.BirdUpdateToOneWithWhereWithoutCoraAudiosInput, Prisma.BirdUpdateWithoutCoraAudiosInput>, Prisma.BirdUncheckedUpdateWithoutCoraAudiosInput>
+}
+
 export type BirdCreateWithoutLocationInput = {
   name: string
   scientificName?: string | null
   imageUrl?: string | null
-  coraAudioUrl?: string | null
   gepogAudioUrl?: string | null
   description?: string | null
   date?: Date | string | null
+  coraAudios?: Prisma.RecordCreateNestedManyWithoutBirdInput
 }
 
 export type BirdUncheckedCreateWithoutLocationInput = {
@@ -461,10 +460,10 @@ export type BirdUncheckedCreateWithoutLocationInput = {
   name: string
   scientificName?: string | null
   imageUrl?: string | null
-  coraAudioUrl?: string | null
   gepogAudioUrl?: string | null
   description?: string | null
   date?: Date | string | null
+  coraAudios?: Prisma.RecordUncheckedCreateNestedManyWithoutBirdInput
 }
 
 export type BirdCreateOrConnectWithoutLocationInput = {
@@ -487,10 +486,10 @@ export type BirdUpdateWithoutLocationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  coraAudios?: Prisma.RecordUpdateManyWithoutBirdNestedInput
 }
 
 export type BirdUncheckedUpdateWithoutLocationInput = {
@@ -498,12 +497,99 @@ export type BirdUncheckedUpdateWithoutLocationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  coraAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  coraAudios?: Prisma.RecordUncheckedUpdateManyWithoutBirdNestedInput
 }
 
+export type BirdCreateWithoutCoraAudiosInput = {
+  name: string
+  scientificName?: string | null
+  imageUrl?: string | null
+  gepogAudioUrl?: string | null
+  description?: string | null
+  date?: Date | string | null
+  location?: Prisma.LocationCreateNestedOneWithoutBirdInput
+}
+
+export type BirdUncheckedCreateWithoutCoraAudiosInput = {
+  id?: number
+  name: string
+  scientificName?: string | null
+  imageUrl?: string | null
+  gepogAudioUrl?: string | null
+  description?: string | null
+  date?: Date | string | null
+  location?: Prisma.LocationUncheckedCreateNestedOneWithoutBirdInput
+}
+
+export type BirdCreateOrConnectWithoutCoraAudiosInput = {
+  where: Prisma.BirdWhereUniqueInput
+  create: Prisma.XOR<Prisma.BirdCreateWithoutCoraAudiosInput, Prisma.BirdUncheckedCreateWithoutCoraAudiosInput>
+}
+
+export type BirdUpsertWithoutCoraAudiosInput = {
+  update: Prisma.XOR<Prisma.BirdUpdateWithoutCoraAudiosInput, Prisma.BirdUncheckedUpdateWithoutCoraAudiosInput>
+  create: Prisma.XOR<Prisma.BirdCreateWithoutCoraAudiosInput, Prisma.BirdUncheckedCreateWithoutCoraAudiosInput>
+  where?: Prisma.BirdWhereInput
+}
+
+export type BirdUpdateToOneWithWhereWithoutCoraAudiosInput = {
+  where?: Prisma.BirdWhereInput
+  data: Prisma.XOR<Prisma.BirdUpdateWithoutCoraAudiosInput, Prisma.BirdUncheckedUpdateWithoutCoraAudiosInput>
+}
+
+export type BirdUpdateWithoutCoraAudiosInput = {
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  location?: Prisma.LocationUpdateOneWithoutBirdNestedInput
+}
+
+export type BirdUncheckedUpdateWithoutCoraAudiosInput = {
+  id?: Prisma.IntFieldUpdateOperationsInput | number
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  scientificName?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  imageUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  gepogAudioUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  date?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+  location?: Prisma.LocationUncheckedUpdateOneWithoutBirdNestedInput
+}
+
+
+/**
+ * Count Type BirdCountOutputType
+ */
+
+export type BirdCountOutputType = {
+  coraAudios: number
+}
+
+export type BirdCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  coraAudios?: boolean | BirdCountOutputTypeCountCoraAudiosArgs
+}
+
+/**
+ * BirdCountOutputType without action
+ */
+export type BirdCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the BirdCountOutputType
+   */
+  select?: Prisma.BirdCountOutputTypeSelect<ExtArgs> | null
+}
+
+/**
+ * BirdCountOutputType without action
+ */
+export type BirdCountOutputTypeCountCoraAudiosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.RecordWhereInput
+}
 
 
 export type BirdSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -511,11 +597,12 @@ export type BirdSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = r
   name?: boolean
   scientificName?: boolean
   imageUrl?: boolean
-  coraAudioUrl?: boolean
   gepogAudioUrl?: boolean
   description?: boolean
   date?: boolean
+  coraAudios?: boolean | Prisma.Bird$coraAudiosArgs<ExtArgs>
   location?: boolean | Prisma.Bird$locationArgs<ExtArgs>
+  _count?: boolean | Prisma.BirdCountOutputTypeDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["bird"]>
 
 export type BirdSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
@@ -523,7 +610,6 @@ export type BirdSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   scientificName?: boolean
   imageUrl?: boolean
-  coraAudioUrl?: boolean
   gepogAudioUrl?: boolean
   description?: boolean
   date?: boolean
@@ -534,7 +620,6 @@ export type BirdSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensio
   name?: boolean
   scientificName?: boolean
   imageUrl?: boolean
-  coraAudioUrl?: boolean
   gepogAudioUrl?: boolean
   description?: boolean
   date?: boolean
@@ -545,15 +630,16 @@ export type BirdSelectScalar = {
   name?: boolean
   scientificName?: boolean
   imageUrl?: boolean
-  coraAudioUrl?: boolean
   gepogAudioUrl?: boolean
   description?: boolean
   date?: boolean
 }
 
-export type BirdOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "scientificName" | "imageUrl" | "coraAudioUrl" | "gepogAudioUrl" | "description" | "date", ExtArgs["result"]["bird"]>
+export type BirdOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "name" | "scientificName" | "imageUrl" | "gepogAudioUrl" | "description" | "date", ExtArgs["result"]["bird"]>
 export type BirdInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  coraAudios?: boolean | Prisma.Bird$coraAudiosArgs<ExtArgs>
   location?: boolean | Prisma.Bird$locationArgs<ExtArgs>
+  _count?: boolean | Prisma.BirdCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type BirdIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
 export type BirdIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {}
@@ -561,6 +647,7 @@ export type BirdIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensi
 export type $BirdPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Bird"
   objects: {
+    coraAudios: Prisma.$RecordPayload<ExtArgs>[]
     location: Prisma.$LocationPayload<ExtArgs> | null
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
@@ -568,7 +655,6 @@ export type $BirdPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs =
     name: string
     scientificName: string | null
     imageUrl: string | null
-    coraAudioUrl: string | null
     gepogAudioUrl: string | null
     description: string | null
     date: Date | null
@@ -966,6 +1052,7 @@ readonly fields: BirdFieldRefs;
  */
 export interface Prisma__BirdClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
+  coraAudios<T extends Prisma.Bird$coraAudiosArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Bird$coraAudiosArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   location<T extends Prisma.Bird$locationArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Bird$locationArgs<ExtArgs>>): Prisma.Prisma__LocationClient<runtime.Types.Result.GetResult<Prisma.$LocationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
   /**
    * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1000,7 +1087,6 @@ export interface BirdFieldRefs {
   readonly name: Prisma.FieldRef<"Bird", 'String'>
   readonly scientificName: Prisma.FieldRef<"Bird", 'String'>
   readonly imageUrl: Prisma.FieldRef<"Bird", 'String'>
-  readonly coraAudioUrl: Prisma.FieldRef<"Bird", 'String'>
   readonly gepogAudioUrl: Prisma.FieldRef<"Bird", 'String'>
   readonly description: Prisma.FieldRef<"Bird", 'String'>
   readonly date: Prisma.FieldRef<"Bird", 'DateTime'>
@@ -1389,6 +1475,30 @@ export type BirdDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * Limit how many Birds to delete.
    */
   limit?: number
+}
+
+/**
+ * Bird.coraAudios
+ */
+export type Bird$coraAudiosArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  /**
+   * Select specific fields to fetch from the Record
+   */
+  select?: Prisma.RecordSelect<ExtArgs> | null
+  /**
+   * Omit specific fields from the Record
+   */
+  omit?: Prisma.RecordOmit<ExtArgs> | null
+  /**
+   * Choose, which related nodes to fetch as well
+   */
+  include?: Prisma.RecordInclude<ExtArgs> | null
+  where?: Prisma.RecordWhereInput
+  orderBy?: Prisma.RecordOrderByWithRelationInput | Prisma.RecordOrderByWithRelationInput[]
+  cursor?: Prisma.RecordWhereUniqueInput
+  take?: number
+  skip?: number
+  distinct?: Prisma.RecordScalarFieldEnum | Prisma.RecordScalarFieldEnum[]
 }
 
 /**

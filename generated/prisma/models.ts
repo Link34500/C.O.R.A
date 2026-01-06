@@ -11,6 +11,7 @@
 export type * from './models/Article'
 export type * from './models/Bird'
 export type * from './models/Location'
+export type * from './models/Record'
 export type * from './models/User'
 export type * from './models/Session'
 export type * from './models/Account'

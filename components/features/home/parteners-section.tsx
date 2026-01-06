@@ -14,6 +14,7 @@ const staggerContainer = {
     },
   },
 };
+
 export default function PartenersSection() {
   return (
     <section className="py-16 bg-base-200">
@@ -60,31 +61,37 @@ export default function PartenersSection() {
           viewport={{ once: true }}
         >
           <motion.p variants={fadeInUp}>
-            Le projet C.O.R.A s'appuie sur la base de données acoustiques
-            fournie par le GEPOG (Groupe d'Étude et de Protection des Oiseaux en
-            Guyane), un Grand merci à eux et à{" "}
+            Le projet C.O.R.A s'appuie sur la base de données acoustique fournie
+            par le GEPOG (Groupe d'Étude et de Protection des Oiseaux en
+            Guyane). Un grand merci à eux ainsi qu'à{" "}
             <span className="font-semibold">Olivier Claessens</span>.
           </motion.p>
+
           <motion.p variants={fadeInUp}>
             Les enregistrements collectés sur le terrain sont traités par
-            analyse des ondes sonores. L'algorithme compare les caractéristiques
-            spectrales et temporelles des signaux captés avec les références
-            disponibles dans la base GEPOG.
+            analyse des ondes sonores. L'algorithme a pour objectif de comparer
+            les caractéristiques des signaux captés avec les références
+            disponibles dans la base GEPOG ainsi que dans d'autres bases de
+            données acoustiques accessibles en ligne.
           </motion.p>
+
           <motion.p variants={fadeInUp}>
             Deux cas de figure peuvent se présenter lors du traitement :
           </motion.p>
+
           <motion.ul
             className="list-disc list-inside space-y-2 ml-4"
             variants={staggerContainer}
           >
             <motion.li variants={fadeInUp}>
               Une correspondance est identifiée dans la base de données :
-              l'espèce est automatiquement reconnue et validée.
+              l'espèce peut être proposée automatiquement et validée après
+              vérification.
             </motion.li>
+
             <motion.li variants={fadeInUp}>
               Aucune correspondance n'est trouvée : une identification manuelle
-              est effectuée par comparaison avec d'autres sources
+              est alors réalisée par comparaison avec d'autres sources
               ornithologiques avant intégration au système.
             </motion.li>
           </motion.ul>

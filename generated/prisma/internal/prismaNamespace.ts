@@ -80,12 +80,12 @@ export type PrismaVersion = {
 }
 
 /**
- * Prisma Client JS version: 7.1.0
- * Query Engine version: ab635e6b9d606fa5c8fb8b1a7f909c3c3c1c98ba
+ * Prisma Client JS version: 7.2.0
+ * Query Engine version: 0c8ef2ce45c83248ab3df073180d5eda9e8be7a3
  */
 export const prismaVersion: PrismaVersion = {
-  client: "7.1.0",
-  engine: "ab635e6b9d606fa5c8fb8b1a7f909c3c3c1c98ba"
+  client: "7.2.0",
+  engine: "0c8ef2ce45c83248ab3df073180d5eda9e8be7a3"
 }
 
 /**
@@ -387,6 +387,7 @@ export const ModelName = {
   Article: 'Article',
   Bird: 'Bird',
   Location: 'Location',
+  Record: 'Record',
   User: 'User',
   Session: 'Session',
   Account: 'Account',
@@ -406,7 +407,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "article" | "bird" | "location" | "user" | "session" | "account" | "verification"
+    modelProps: "article" | "bird" | "location" | "record" | "user" | "session" | "account" | "verification"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -629,6 +630,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.LocationCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.LocationCountAggregateOutputType> | number
+        }
+      }
+    }
+    Record: {
+      payload: Prisma.$RecordPayload<ExtArgs>
+      fields: Prisma.RecordFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.RecordFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.RecordFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        findFirst: {
+          args: Prisma.RecordFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.RecordFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        findMany: {
+          args: Prisma.RecordFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>[]
+        }
+        create: {
+          args: Prisma.RecordCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        createMany: {
+          args: Prisma.RecordCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.RecordCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>[]
+        }
+        delete: {
+          args: Prisma.RecordDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        update: {
+          args: Prisma.RecordUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        deleteMany: {
+          args: Prisma.RecordDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.RecordUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.RecordUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>[]
+        }
+        upsert: {
+          args: Prisma.RecordUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$RecordPayload>
+        }
+        aggregate: {
+          args: Prisma.RecordAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateRecord>
+        }
+        groupBy: {
+          args: Prisma.RecordGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.RecordGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.RecordCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.RecordCountAggregateOutputType> | number
         }
       }
     }
@@ -971,6 +1046,7 @@ export const ArticleScalarFieldEnum = {
   id: 'id',
   title: 'title',
   content: 'content',
+  published: 'published',
   date: 'date',
   updateAt: 'updateAt'
 } as const
@@ -983,7 +1059,6 @@ export const BirdScalarFieldEnum = {
   name: 'name',
   scientificName: 'scientificName',
   imageUrl: 'imageUrl',
-  coraAudioUrl: 'coraAudioUrl',
   gepogAudioUrl: 'gepogAudioUrl',
   description: 'description',
   date: 'date'
@@ -1000,6 +1075,15 @@ export const LocationScalarFieldEnum = {
 } as const
 
 export type LocationScalarFieldEnum = (typeof LocationScalarFieldEnum)[keyof typeof LocationScalarFieldEnum]
+
+
+export const RecordScalarFieldEnum = {
+  id: 'id',
+  url: 'url',
+  birdId: 'birdId'
+} as const
+
+export type RecordScalarFieldEnum = (typeof RecordScalarFieldEnum)[keyof typeof RecordScalarFieldEnum]
 
 
 export const UserScalarFieldEnum = {
@@ -1120,6 +1204,13 @@ export type ListStringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaMod
 
 
 /**
+ * Reference to a field of type 'Boolean'
+ */
+export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+    
+
+
+/**
  * Reference to a field of type 'DateTime'
  */
 export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
@@ -1144,13 +1235,6 @@ export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, '
  * Reference to a field of type 'Float[]'
  */
 export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
-    
-
-
-/**
- * Reference to a field of type 'Boolean'
- */
-export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 /**
@@ -1251,6 +1335,7 @@ export type GlobalOmitConfig = {
   article?: Prisma.ArticleOmit
   bird?: Prisma.BirdOmit
   location?: Prisma.LocationOmit
+  record?: Prisma.RecordOmit
   user?: Prisma.UserOmit
   session?: Prisma.SessionOmit
   account?: Prisma.AccountOmit

@@ -23,7 +23,6 @@ export default function SearchBar({
       onResults(data);
       setLoading(false);
     }, 400); // 400ms de délai
-
     return () => clearTimeout(timeout);
   }, [query, onResults]);
 

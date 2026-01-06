@@ -23,9 +23,7 @@ export default function Sidebar({
       ></label>
       <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64 py-8 gap-8">
         <h1 className="text-center text-xl font-semibold mx-auto is-drawer-close:hidden">
-          Bienvenue{" "}
-          {user.name.charAt(0).toUpperCase() +
-            user.name.slice(1, user.name.length)}
+          Bienvenue {user.name.charAt(0).toUpperCase() + user.name.slice(1)}
         </h1>
         <ul className="menu w-full grow gap-3">
           {sidebarLinks?.map((sidebarLink) => (

@@ -1,6 +1,6 @@
 "use client";
-import { FormField } from "@/components/shared/Fields";
-import { Button } from "@/components/ui/Button";
+import { FormField } from "@/components/ui/fields";
+import { Button } from "@/components/ui/button";
 import { signUp } from "@/lib/auth-client";
 
 import { passwordShem, usernameShem } from "@/utils/schemas";
@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 import { z } from "zod";
+import { Title } from "@/components/ui/text";
 
 type RegisterFormValues = z.infer<typeof RegisterShema>;
 
@@ -66,7 +67,7 @@ export default function Register() {
 
   return (
     <form className="card-body gap-8" onSubmit={handleSubmit(onSubmit)}>
-      <h1 className="card-title">Crée un compte</h1>
+      <Title className="card-title">Créer un compte</Title>
 
       <div className="flex flex-col gap-4">
         {registerFields.map((field) => (
@@ -83,10 +84,6 @@ export default function Register() {
         <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Création en cours..." : "Crée son compte"}
         </Button>
-        <button className="btn bg-[#7289da] text-white border-[#7289da]">
-          <img src="/socials/discord.svg" width={24} alt="Logo Discord" />
-          Créer un compte via discord
-        </button>
       </div>
     </form>
   );
