@@ -52,8 +52,8 @@ model Location {
 model Record {
   id Int @id @default(autoincrement())
   url String
-  bird Bird @relation(fields: [birdId],references: [id],onDelete: SetNull)
-  birdId Int
+  bird Bird? @relation(fields: [birdId],references: [id],onDelete: SetNull)
+  birdId Int?
   source Source
 }
 
