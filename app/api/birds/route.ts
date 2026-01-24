@@ -9,7 +9,7 @@ export async function GET(req: Request) {
   const birds = await prisma.bird.findMany({
     skip,
     take,
-    include: { location: true },
+    include: { location: true,records:true },
   });
 
   return NextResponse.json(birds);

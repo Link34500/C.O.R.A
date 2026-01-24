@@ -14,7 +14,7 @@ import PerspectiveSection from "@/components/features/home/perspectives-section"
 export default async function HomePage() {
   const birdSounds = await prisma.bird.findMany({
     where: { imageUrl: { not: null } },
-    include: { location: true },
+    include: { location: true, records: true },
     take: 6,
   });
 

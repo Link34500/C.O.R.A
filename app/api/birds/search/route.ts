@@ -15,8 +15,8 @@ export async function GET(req: Request) {
         { scientificName: { contains: query, mode: "insensitive" } },
       ],
     },
-    include: { location: true },
-    take: 10, // Limite le nombre de résultats
+    include: { location: true, records: true },
+    take: 20,
   });
 
   return NextResponse.json(birds);

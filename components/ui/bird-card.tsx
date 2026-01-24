@@ -89,10 +89,11 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
             </p>
           )}
         </div>
-        <CardActions className={cn(!isBig && "mt-2")}>
-          <Button onClick={playSound} disabled={!bird.records}>
+        <CardActions className={cn(!isBig && "flex flex-col")}>
+          <Button onClick={playSound} disabled={!bird.records?.length}>
             Écouter le chant
           </Button>
+          <Button variant="outline">Voir la page de l'oiseau</Button>
         </CardActions>
       </CardBody>
     </Card>
