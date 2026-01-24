@@ -32,14 +32,15 @@
 ### 🚀 Installation
 
 <details>
-<summary><b>Étape 1 : Prérequis (Cliquer pour dérouler)</b></summary>
+<summary><b>Étape 1 : Prérequis</b></summary>
 
 - **Git** installé
 - **Docker** & **Docker Compose** installés
 - Un fichier `.env` configuré à la racine (Base de données, etc.)
 </details>
 
-**Étape 2 : Clonage & Lancement**
+<details>
+<summary><b>Étape 2 : Clonage & Lancement</b></summary>
 
 Lancement en mode développement :
 
@@ -66,3 +67,5 @@ cd C.O.R.A
 # Lancer l'infrastructure (DB + Web)
 docker compose up -d
 ```
+
+</details>
