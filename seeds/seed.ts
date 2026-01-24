@@ -1,6 +1,8 @@
 import "dotenv/config";
 import { PrismaClient } from "../generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import * as birds from "./data.json";
+import { Source } from "../generated/prisma/client";
 
 const connectionString = `${process.env.DATABASE_URL}`;
 
@@ -10,26 +12,28 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log("Début de l'importation...");
 
-  // for (const bird of birds) {
-  //   await prisma.bird.create({
-  //     data: {
-  //       name: bird.name,
-  //       scientificName: bird.scientificName,
-  //       imageUrl: bird.imageUrl || null,
-  //       // On crée le Record lié directement ici
-  //       records: {
-  //         create: {
-  //           url: bird.gepogAudioUrl,
-  //           source: "GEPOG", // Utilisation de l'Enum
-  //         },
-  //       },
-  //     },
-  //   });
-  // }
+  // Accès aux données (gestion du format d'import JSON)
+  const birdsArray = (birds as any).default || birds;
 
-  console.log(`Import terminé ! ${birds.length} oiseaux importés.`);
+  for (const bird of birdsArray) {
+    await prisma.bird.create({
+      data: {
+        name: bird.name,
+        scientificName: bird.scientificName,
+        imageUrl: bird.imageUrl,
+        // Relation 1-n : on crée les records liés à cet oiseau
+        records: {
+          create: bird.records.map((record: any) => ({
+            url: record.url,
+            source: record.source as Source, // Cast pour matcher l'Enum
+          })),
+        },
+      },
+    });
+  }
+
+  console.log(`Import terminé ! ${birdsArray.length} oiseaux importés.`);
 }
-
 main()
   .catch((e) => {
     console.error(e);
