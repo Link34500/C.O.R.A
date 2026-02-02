@@ -24,8 +24,8 @@ export function Navbar({
   return (
     <header
       className={cn(
-        "items-center p-4 border-b border-base-200 sticky top-0 left-0 flex justify-around bg-base-100 z-10 md:flex-row gap-10",
-        open ? "flex-col" : "flex-row"
+        "items-center p-4 border-b border-base-200 sticky top-0 left-0 flex justify-around bg-base-100 z-10 md:flex-row gap-10 shadow-xl",
+        open ? "flex-col" : "flex-row",
       )}
     >
       <div
@@ -44,7 +44,7 @@ export function Navbar({
       <nav
         className={cn(
           "md:flex items-center gap-5 flex-col md:flex-row",
-          open ? "flex" : "hidden md:flex"
+          open ? "flex" : "hidden md:flex",
         )}
       >
         {navLinks?.map((link) => (
@@ -56,7 +56,7 @@ export function Navbar({
       <div
         className={cn(
           open ? "flex flex-col" : "hidden",
-          "items-center md:flex md:flex-row gap-3"
+          "items-center md:flex md:flex-row gap-3",
         )}
       >
         {navButtons?.map(({ href, ...button }, idx) => (
