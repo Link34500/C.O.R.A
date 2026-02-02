@@ -20,8 +20,8 @@ async function main() {
       data: {
         name: bird.name,
         scientificName: bird.scientificName,
-        imageUrl: bird.imageUrl,
-        // Relation 1-n : on crée les records liés à cet oiseau
+        imageUrl: "/" + bird.imageUrl,
+
         records: {
           create: bird.records.map((record: any) => ({
             url: record.url,

@@ -12,6 +12,9 @@ import {
 import { Paragraph } from "@/components/ui/text";
 import { Button } from "@/components/ui/button";
 import cn from "@/lib/cn";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+import { BirdNotFound } from "./bird-not-found";
 
 const birdCardVariants = cva("bg-base-200 overflow-hidden", {
   variants: {
@@ -41,6 +44,7 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
     };
   }, []);
 
+  const router = useRouter();
   const playSound = () => {
     if (!bird.records) return;
     if (audioRef.current) {
@@ -56,11 +60,20 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
   return (
     <Card className={cn(birdCardVariants({ size }), className)}>
       <CardFigure className={cn(isBig ? "lg:w-1/2" : "w-full")}>
-        <img
-          src={bird?.imageUrl || "/placeholder-bird.jpg"}
-          alt={bird.name}
-          className={cn("object-cover", isBig ? "h-96 w-full" : "h-48 w-full")}
-        />
+        {bird.imageUrl ? (
+          <Image
+            src={"/" + bird.imageUrl}
+            alt={bird.name}
+            className={cn(
+              "object-cover",
+              isBig ? "h-96 w-full" : "h-48 w-full",
+            )}
+            width={512}
+            height={512}
+          />
+        ) : (
+          <BirdNotFound size={"full"} variant={"ghost"} />
+        )}
       </CardFigure>
 
       <CardBody
@@ -89,11 +102,18 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
             </p>
           )}
         </div>
-        <CardActions className={cn(!isBig && "flex flex-col")}>
+        <CardActions
+          className={cn(!isBig && "flex flex-col justify-end h-full")}
+        >
           <Button onClick={playSound} disabled={!bird.records?.length}>
             Écouter le chant
           </Button>
-          <Button variant="outline">Voir la page de l'oiseau</Button>
+          <Button
+            variant="outline"
+            onClick={() => router.push(`birds/${bird.id}`)}
+          >
+            Voir la page de l'oiseau
+          </Button>
         </CardActions>
       </CardBody>
     </Card>

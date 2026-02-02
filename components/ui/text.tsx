@@ -7,9 +7,9 @@ export function Title({
   ...props
 }: React.ComponentProps<"h1">) {
   return (
-    <h1 className={cn("text-4xl font-bold mb-12", className)} {...props}>
+    <h2 className={cn("text-4xl font-bold mb-12", className)} {...props}>
       {children}
-    </h1>
+    </h2>
   );
 }
 
@@ -19,9 +19,9 @@ export function SubTitle({
   ...props
 }: React.ComponentProps<"h2">) {
   return (
-    <h2 className={cn("text-2xl font-bold mb-6", className)} {...props}>
+    <h3 className={cn("text-2xl font-bold mb-6", className)} {...props}>
       {children}
-    </h2>
+    </h3>
   );
 }
 
