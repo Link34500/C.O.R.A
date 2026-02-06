@@ -62,7 +62,11 @@ export function BirdCard({ bird, size, className }: BirdCardProps) {
       <CardFigure className={cn(isBig ? "lg:w-1/2" : "w-full")}>
         {bird.imageUrl ? (
           <Image
+<<<<<<< HEAD
             src={"/" + bird.imageUrl}
+=======
+            src={bird.imageUrl}
+>>>>>>> 29815afe78ebbdf91bec1ca97639531ee30f1163
             alt={bird.name}
             className={cn(
               "object-cover",
