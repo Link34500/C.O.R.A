@@ -20,7 +20,7 @@ async function main() {
       data: {
         name: bird.name,
         scientificName: bird.scientificName,
-        imageUrl: "/" + bird.imageUrl,
+        imageUrl: bird.imageUrl ? "/cdn/" + bird.imageUrl : null,
 
         records: {
           create: bird.records.map((record: any) => ({

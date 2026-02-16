@@ -469,19 +469,6 @@
   },
   {
     "id": 37,
-    "name": "Carnifex barré",
-    "scientificName": "Micrastur ruficollis",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/carnifex-barre/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 37
-      }
-    ]
-  },
-  {
-    "id": 38,
     "name": "Carnifex à gorge cendrée",
     "scientificName": "Micrastur gilvicollis",
     "imageUrl": null,
@@ -489,38 +476,25 @@
       {
         "url": "uploads/birds/carnifex-a-gorge-cendree/gepog.mp3",
         "source": "GEPOG",
+        "birdId": 37
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Cassique cul-jaune",
+    "scientificName": "Cacicus cela",
+    "imageUrl": "uploads/birds/cassique-cul-jaune/cover.jpg",
+    "records": [
+      {
+        "url": "uploads/birds/cassique-cul-jaune/gepog.mp3",
+        "source": "GEPOG",
         "birdId": 38
       }
     ]
   },
   {
     "id": 39,
-    "name": "Cassique cul-jaune",
-    "scientificName": "Cacicus cela",
-    "imageUrl": "uploads/birds/cassique-cul-jaune/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/cassique-cul-jaune/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 39
-      }
-    ]
-  },
-  {
-    "id": 40,
-    "name": "Cassique cul-jaune",
-    "scientificName": "Cacicus cela",
-    "imageUrl": "uploads/birds/cassique-cul-jaune/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/cassique-cul-jaune/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 40
-      }
-    ]
-  },
-  {
-    "id": 41,
     "name": "Cassique cul-rouge",
     "scientificName": "Cacicus haemorrhous",
     "imageUrl": "uploads/birds/cassique-cul-rouge/cover.jpg",
@@ -528,25 +502,12 @@
       {
         "url": "uploads/birds/cassique-cul-rouge/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 41
+        "birdId": 39
       }
     ]
   },
   {
-    "id": 42,
-    "name": "Cassique cul-rouge",
-    "scientificName": "Cacicus haemorrhous",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/cassique-cul-rouge/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 42
-      }
-    ]
-  },
-  {
-    "id": 43,
+    "id": 40,
     "name": "Cassique huppé",
     "scientificName": "Psarocolius decumanus",
     "imageUrl": "uploads/birds/cassique-huppe/cover.jpg",
@@ -554,12 +515,12 @@
       {
         "url": "uploads/birds/cassique-huppe/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 43
+        "birdId": 40
       }
     ]
   },
   {
-    "id": 44,
+    "id": 41,
     "name": "Cassique vert",
     "scientificName": "Psarocolius viridis",
     "imageUrl": "uploads/birds/cassique-vert/cover.jpg",
@@ -567,25 +528,12 @@
       {
         "url": "uploads/birds/cassique-vert/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 44
+        "birdId": 41
       }
     ]
   },
   {
-    "id": 45,
-    "name": "Cassique vert",
-    "scientificName": "Psarocolius viridis",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/cassique-vert/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 45
-      }
-    ]
-  },
-  {
-    "id": 46,
+    "id": 42,
     "name": "Chevêchette d'Amazonie",
     "scientificName": "Glaucidium hardyi",
     "imageUrl": null,
@@ -593,12 +541,12 @@
       {
         "url": "uploads/birds/chevechette-d-amazonie/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 46
+        "birdId": 42
       }
     ]
   },
   {
-    "id": 47,
+    "id": 43,
     "name": "Chouette mouchetée",
     "scientificName": "Ciccaba virgata",
     "imageUrl": null,
@@ -606,12 +554,12 @@
       {
         "url": "uploads/birds/chouette-mouchetee/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 47
+        "birdId": 43
       }
     ]
   },
   {
-    "id": 48,
+    "id": 44,
     "name": "Chouette à lunettes",
     "scientificName": "Pulsatrix perspicillata",
     "imageUrl": null,
@@ -619,12 +567,12 @@
       {
         "url": "uploads/birds/chouette-a-lunettes/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 48
+        "birdId": 44
       }
     ]
   },
   {
-    "id": 49,
+    "id": 45,
     "name": "Colibri topaze",
     "scientificName": "Topaza pella",
     "imageUrl": "uploads/birds/colibri-topaze/cover.jpg",
@@ -632,12 +580,12 @@
       {
         "url": "uploads/birds/colibri-topaze/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 49
+        "birdId": 45
       }
     ]
   },
   {
-    "id": 50,
+    "id": 46,
     "name": "Colombe de Verreaux",
     "scientificName": "Leptotila verreauxi",
     "imageUrl": "uploads/birds/colombe-de-verreaux/cover.jpg",
@@ -645,12 +593,12 @@
       {
         "url": "uploads/birds/colombe-de-verreaux/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 50
+        "birdId": 46
       }
     ]
   },
   {
-    "id": 51,
+    "id": 47,
     "name": "Colombe pygmée",
     "scientificName": "Columbina minuta",
     "imageUrl": null,
@@ -658,12 +606,12 @@
       {
         "url": "uploads/birds/colombe-pygmee/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 51
+        "birdId": 47
       }
     ]
   },
   {
-    "id": 52,
+    "id": 48,
     "name": "Colombe rousse",
     "scientificName": "Columbina talpacoti",
     "imageUrl": "uploads/birds/colombe-rousse/cover.jpg",
@@ -671,12 +619,12 @@
       {
         "url": "uploads/birds/colombe-rousse/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 52
+        "birdId": 48
       }
     ]
   },
   {
-    "id": 53,
+    "id": 49,
     "name": "Colombe rouviolette",
     "scientificName": "Geotrygon montana",
     "imageUrl": null,
@@ -684,12 +632,12 @@
       {
         "url": "uploads/birds/colombe-rouviolette/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 53
+        "birdId": 49
       }
     ]
   },
   {
-    "id": 54,
+    "id": 50,
     "name": "Colombe à front gris",
     "scientificName": "Leptotila rufaxilla",
     "imageUrl": "uploads/birds/colombe-a-front-gris/cover.jpg",
@@ -697,12 +645,12 @@
       {
         "url": "uploads/birds/colombe-a-front-gris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 54
+        "birdId": 50
       }
     ]
   },
   {
-    "id": 55,
+    "id": 51,
     "name": "Colombe à queue noire",
     "scientificName": "Columbina passerina",
     "imageUrl": "uploads/birds/colombe-a-queue-noire/cover.jpg",
@@ -710,12 +658,12 @@
       {
         "url": "uploads/birds/colombe-a-queue-noire/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 55
+        "birdId": 51
       }
     ]
   },
   {
-    "id": 56,
+    "id": 52,
     "name": "Coq-de-roche orange",
     "scientificName": "Rupicola rupicola",
     "imageUrl": null,
@@ -723,25 +671,12 @@
       {
         "url": "uploads/birds/coq-de-roche-orange/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 56
+        "birdId": 52
       }
     ]
   },
   {
-    "id": 57,
-    "name": "Coq-de-roche orange",
-    "scientificName": "Rupicola rupicola",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/coq-de-roche-orange/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 57
-      }
-    ]
-  },
-  {
-    "id": 58,
+    "id": 53,
     "name": "Coracine chauve",
     "scientificName": "Perissocephalus tricolor",
     "imageUrl": null,
@@ -749,12 +684,12 @@
       {
         "url": "uploads/birds/coracine-chauve/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 58
+        "birdId": 53
       }
     ]
   },
   {
-    "id": 59,
+    "id": 54,
     "name": "Coracine noire",
     "scientificName": "Querula purpurata",
     "imageUrl": "uploads/birds/coracine-noire/cover.jpg",
@@ -762,12 +697,12 @@
       {
         "url": "uploads/birds/coracine-noire/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 59
+        "birdId": 54
       }
     ]
   },
   {
-    "id": 60,
+    "id": 55,
     "name": "Cotinga de Cayenne",
     "scientificName": "Cotinga cayana",
     "imageUrl": null,
@@ -775,12 +710,12 @@
       {
         "url": "uploads/birds/cotinga-de-cayenne/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 60
+        "birdId": 55
       }
     ]
   },
   {
-    "id": 61,
+    "id": 56,
     "name": "Cotinga ouette",
     "scientificName": "Phoenicircus carnifex",
     "imageUrl": "uploads/birds/cotinga-ouette/cover.jpg",
@@ -788,25 +723,12 @@
       {
         "url": "uploads/birds/cotinga-ouette/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 61
+        "birdId": 56
       }
     ]
   },
   {
-    "id": 62,
-    "name": "Cotinga ouette",
-    "scientificName": "Phoenicircus carnifex",
-    "imageUrl": "uploads/birds/cotinga-ouette/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/cotinga-ouette/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 62
-      }
-    ]
-  },
-  {
-    "id": 63,
+    "id": 57,
     "name": "Cotinga pompadour",
     "scientificName": "Xipholena punicea",
     "imageUrl": null,
@@ -814,12 +736,12 @@
       {
         "url": "uploads/birds/cotinga-pompadour/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 63
+        "birdId": 57
       }
     ]
   },
   {
-    "id": 64,
+    "id": 58,
     "name": "Donacobe à miroir",
     "scientificName": "Donacobius atricapilla",
     "imageUrl": "uploads/birds/donacobe-a-miroir/cover.jpg",
@@ -827,12 +749,12 @@
       {
         "url": "uploads/birds/donacobe-a-miroir/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 64
+        "birdId": 58
       }
     ]
   },
   {
-    "id": 65,
+    "id": 59,
     "name": "Elénie de Gaimard",
     "scientificName": "Myiopagis gaimardii",
     "imageUrl": "uploads/birds/elenie-de-gaimard/cover.jpg",
@@ -840,12 +762,12 @@
       {
         "url": "uploads/birds/elenie-de-gaimard/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 65
+        "birdId": 59
       }
     ]
   },
   {
-    "id": 66,
+    "id": 60,
     "name": "Elénie à couronne d'or",
     "scientificName": "Myiopagis flavivertex",
     "imageUrl": "uploads/birds/elenie-a-couronne-d-or/cover.jpg",
@@ -853,12 +775,12 @@
       {
         "url": "uploads/birds/elenie-a-couronne-d-or/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 66
+        "birdId": 60
       }
     ]
   },
   {
-    "id": 67,
+    "id": 61,
     "name": "Elénie à ventre jaune",
     "scientificName": "Elaenia flavogaster",
     "imageUrl": "uploads/birds/elenie-a-ventre-jaune/cover.jpg",
@@ -866,12 +788,12 @@
       {
         "url": "uploads/birds/elenie-a-ventre-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 67
+        "birdId": 61
       }
     ]
   },
   {
-    "id": 68,
+    "id": 62,
     "name": "Engoulevent pauraqué",
     "scientificName": "Nyctidromus albicollis",
     "imageUrl": null,
@@ -879,12 +801,12 @@
       {
         "url": "uploads/birds/engoulevent-pauraque/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 68
+        "birdId": 62
       }
     ]
   },
   {
-    "id": 69,
+    "id": 63,
     "name": "Ermite nain",
     "scientificName": "Phaethornis longuemareus",
     "imageUrl": "uploads/birds/ermite-nain/cover.jpg",
@@ -892,12 +814,12 @@
       {
         "url": "uploads/birds/ermite-nain/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 69
+        "birdId": 63
       }
     ]
   },
   {
-    "id": 70,
+    "id": 64,
     "name": "Ermite roussâtre",
     "scientificName": "Phaethornis ruber",
     "imageUrl": "uploads/birds/ermite-roussatre/cover.jpg",
@@ -905,12 +827,12 @@
       {
         "url": "uploads/birds/ermite-roussatre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 70
+        "birdId": 64
       }
     ]
   },
   {
-    "id": 71,
+    "id": 65,
     "name": "Ermite à brins blancs",
     "scientificName": "Phaethornis superciliosus",
     "imageUrl": "uploads/birds/ermite-a-brins-blancs/cover.jpg",
@@ -918,12 +840,12 @@
       {
         "url": "uploads/birds/ermite-a-brins-blancs/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 71
+        "birdId": 65
       }
     ]
   },
   {
-    "id": 72,
+    "id": 66,
     "name": "Ermite à long bec",
     "scientificName": "Phaethornis malaris",
     "imageUrl": "uploads/birds/ermite-a-long-bec/cover.jpg",
@@ -931,12 +853,12 @@
       {
         "url": "uploads/birds/ermite-a-long-bec/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 72
+        "birdId": 66
       }
     ]
   },
   {
-    "id": 73,
+    "id": 67,
     "name": "Evêque bleu-noir",
     "scientificName": "Cyanoloxia cyanoides",
     "imageUrl": "uploads/birds/eveque-bleu-noir/cover.jpg",
@@ -944,12 +866,12 @@
       {
         "url": "uploads/birds/eveque-bleu-noir/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 73
+        "birdId": 67
       }
     ]
   },
   {
-    "id": 74,
+    "id": 68,
     "name": "Fourmilier manikup",
     "scientificName": "Pithys albifrons",
     "imageUrl": null,
@@ -957,12 +879,12 @@
       {
         "url": "uploads/birds/fourmilier-manikup/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 74
+        "birdId": 68
       }
     ]
   },
   {
-    "id": 75,
+    "id": 69,
     "name": "Fourmilier zébré",
     "scientificName": "Willisornis poecilinotus",
     "imageUrl": "uploads/birds/fourmilier-zebre/cover.jpg",
@@ -970,12 +892,12 @@
       {
         "url": "uploads/birds/fourmilier-zebre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 75
+        "birdId": 69
       }
     ]
   },
   {
-    "id": 76,
+    "id": 70,
     "name": "Gobemoucheron tropical",
     "scientificName": "Polioptila plumbea",
     "imageUrl": "uploads/birds/gobemoucheron-tropical/cover.jpg",
@@ -983,12 +905,12 @@
       {
         "url": "uploads/birds/gobemoucheron-tropical/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 76
+        "birdId": 70
       }
     ]
   },
   {
-    "id": 77,
+    "id": 71,
     "name": "Grallaire grand-beffroi",
     "scientificName": "Myrmothera campanisona",
     "imageUrl": "uploads/birds/grallaire-grand-beffroi/cover.jpg",
@@ -996,12 +918,12 @@
       {
         "url": "uploads/birds/grallaire-grand-beffroi/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 77
+        "birdId": 71
       }
     ]
   },
   {
-    "id": 78,
+    "id": 72,
     "name": "Grallaire roi",
     "scientificName": "Grallaria varia",
     "imageUrl": "uploads/birds/grallaire-roi/cover.jpg",
@@ -1009,12 +931,12 @@
       {
         "url": "uploads/birds/grallaire-roi/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 78
+        "birdId": 72
       }
     ]
   },
   {
-    "id": 79,
+    "id": 73,
     "name": "Grallaire tachetée",
     "scientificName": "Hylopezus macularius",
     "imageUrl": "uploads/birds/grallaire-tachetee/cover.jpg",
@@ -1022,12 +944,12 @@
       {
         "url": "uploads/birds/grallaire-tachetee/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 79
+        "birdId": 73
       }
     ]
   },
   {
-    "id": 80,
+    "id": 74,
     "name": "Grand Batara",
     "scientificName": "Taraba major",
     "imageUrl": "uploads/birds/grand-batara/cover.jpg",
@@ -1035,12 +957,12 @@
       {
         "url": "uploads/birds/grand-batara/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 80
+        "birdId": 74
       }
     ]
   },
   {
-    "id": 81,
+    "id": 75,
     "name": "Grand Ibijau",
     "scientificName": "Nyctibius grandis",
     "imageUrl": null,
@@ -1048,12 +970,12 @@
       {
         "url": "uploads/birds/grand-ibijau/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 81
+        "birdId": 75
       }
     ]
   },
   {
-    "id": 82,
+    "id": 76,
     "name": "Grand Tardivole",
     "scientificName": "Emberizoides herbicola",
     "imageUrl": "uploads/birds/grand-tardivole/cover.jpg",
@@ -1061,12 +983,12 @@
       {
         "url": "uploads/birds/grand-tardivole/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 82
+        "birdId": 76
       }
     ]
   },
   {
-    "id": 83,
+    "id": 77,
     "name": "Grand Tinamou",
     "scientificName": "Tinamus major",
     "imageUrl": null,
@@ -1074,12 +996,12 @@
       {
         "url": "uploads/birds/grand-tinamou/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 83
+        "birdId": 77
       }
     ]
   },
   {
-    "id": 84,
+    "id": 78,
     "name": "Grimpar barré",
     "scientificName": "Dendrocolaptes certhia",
     "imageUrl": null,
@@ -1087,12 +1009,12 @@
       {
         "url": "uploads/birds/grimpar-barre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 84
+        "birdId": 78
       }
     ]
   },
   {
-    "id": 85,
+    "id": 79,
     "name": "Grimpar bec-en-coin",
     "scientificName": "Glyphorhynchus spirurus",
     "imageUrl": "uploads/birds/grimpar-bec-en-coin/cover.jpg",
@@ -1100,12 +1022,12 @@
       {
         "url": "uploads/birds/grimpar-bec-en-coin/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 85
+        "birdId": 79
       }
     ]
   },
   {
-    "id": 86,
+    "id": 80,
     "name": "Grimpar des cabosses",
     "scientificName": "Xiphorhynchus guttatus",
     "imageUrl": "uploads/birds/grimpar-des-cabosses/cover.jpg",
@@ -1113,12 +1035,12 @@
       {
         "url": "uploads/birds/grimpar-des-cabosses/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 86
+        "birdId": 80
       }
     ]
   },
   {
-    "id": 87,
+    "id": 81,
     "name": "Grimpar flambé",
     "scientificName": "Xiphorhynchus pardalotus",
     "imageUrl": "uploads/birds/grimpar-flambe/cover.jpg",
@@ -1126,12 +1048,12 @@
       {
         "url": "uploads/birds/grimpar-flambe/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 87
+        "birdId": 81
       }
     ]
   },
   {
-    "id": 88,
+    "id": 82,
     "name": "Grimpar lancéolé",
     "scientificName": "Lepidocolaptes albolineatus",
     "imageUrl": "uploads/birds/grimpar-lanceole/cover.jpg",
@@ -1139,12 +1061,12 @@
       {
         "url": "uploads/birds/grimpar-lanceole/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 88
+        "birdId": 82
       }
     ]
   },
   {
-    "id": 89,
+    "id": 83,
     "name": "Grimpar talapiot",
     "scientificName": "Dendroplex picus",
     "imageUrl": "uploads/birds/grimpar-talapiot/cover.jpg",
@@ -1152,12 +1074,12 @@
       {
         "url": "uploads/birds/grimpar-talapiot/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 89
+        "birdId": 83
       }
     ]
   },
   {
-    "id": 90,
+    "id": 84,
     "name": "Grimpar à collier",
     "scientificName": "Dendrexetastes rufigula",
     "imageUrl": "uploads/birds/grimpar-a-collier/cover.jpg",
@@ -1165,12 +1087,12 @@
       {
         "url": "uploads/birds/grimpar-a-collier/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 90
+        "birdId": 84
       }
     ]
   },
   {
-    "id": 91,
+    "id": 85,
     "name": "Grisin ardoisé",
     "scientificName": "Cercomacra cinerascens",
     "imageUrl": "uploads/birds/grisin-ardoise/cover.jpg",
@@ -1178,12 +1100,12 @@
       {
         "url": "uploads/birds/grisin-ardoise/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 91
+        "birdId": 85
       }
     ]
   },
   {
-    "id": 92,
+    "id": 86,
     "name": "Grisin de Cayenne",
     "scientificName": "Formicivora grisea",
     "imageUrl": "uploads/birds/grisin-de-cayenne/cover.jpg",
@@ -1191,12 +1113,12 @@
       {
         "url": "uploads/birds/grisin-de-cayenne/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 92
+        "birdId": 86
       }
     ]
   },
   {
-    "id": 93,
+    "id": 87,
     "name": "Grisin de Todd",
     "scientificName": "Herpsilochmus stictocephalus",
     "imageUrl": "uploads/birds/grisin-de-todd/cover.jpg",
@@ -1204,12 +1126,12 @@
       {
         "url": "uploads/birds/grisin-de-todd/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 93
+        "birdId": 87
       }
     ]
   },
   {
-    "id": 94,
+    "id": 88,
     "name": "Grisin noirâtre",
     "scientificName": "Cercomacroides nigrescens",
     "imageUrl": null,
@@ -1217,12 +1139,12 @@
       {
         "url": "uploads/birds/grisin-noiratre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 94
+        "birdId": 88
       }
     ]
   },
   {
-    "id": 95,
+    "id": 89,
     "name": "Grisin sombre",
     "scientificName": "Cercomacroides tyrannina",
     "imageUrl": "uploads/birds/grisin-sombre/cover.jpg",
@@ -1230,12 +1152,12 @@
       {
         "url": "uploads/birds/grisin-sombre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 95
+        "birdId": 89
       }
     ]
   },
   {
-    "id": 96,
+    "id": 90,
     "name": "Grisin étoilé",
     "scientificName": "Microrhopias quixensis",
     "imageUrl": "uploads/birds/grisin-etoile/cover.jpg",
@@ -1243,12 +1165,12 @@
       {
         "url": "uploads/birds/grisin-etoile/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 96
+        "birdId": 90
       }
     ]
   },
   {
-    "id": 97,
+    "id": 91,
     "name": "Géocoucou pavonin",
     "scientificName": "Dromococcyx pavoninus",
     "imageUrl": null,
@@ -1256,12 +1178,12 @@
       {
         "url": "uploads/birds/geocoucou-pavonin/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 97
+        "birdId": 91
       }
     ]
   },
   {
-    "id": 98,
+    "id": 92,
     "name": "Géocoucou tacheté",
     "scientificName": "Tapera naevia",
     "imageUrl": "uploads/birds/geocoucou-tachete/cover.jpg",
@@ -1269,25 +1191,12 @@
       {
         "url": "uploads/birds/geocoucou-tachete/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 98
+        "birdId": 92
       }
     ]
   },
   {
-    "id": 99,
-    "name": "Géocoucou tacheté",
-    "scientificName": "Tapera naevia",
-    "imageUrl": "uploads/birds/geocoucou-tachete/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/geocoucou-tachete/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 99
-      }
-    ]
-  },
-  {
-    "id": 100,
+    "id": 93,
     "name": "Hibou strié",
     "scientificName": "Pseudoscops clamator",
     "imageUrl": null,
@@ -1295,12 +1204,12 @@
       {
         "url": "uploads/birds/hibou-strie/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 100
+        "birdId": 93
       }
     ]
   },
   {
-    "id": 101,
+    "id": 94,
     "name": "Hirondelle chalybée",
     "scientificName": "Progne chalybea",
     "imageUrl": "uploads/birds/hirondelle-chalybee/cover.jpg",
@@ -1308,12 +1217,12 @@
       {
         "url": "uploads/birds/hirondelle-chalybee/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 101
+        "birdId": 94
       }
     ]
   },
   {
-    "id": 102,
+    "id": 95,
     "name": "Ibijau gris",
     "scientificName": "Nyctibius griseus",
     "imageUrl": null,
@@ -1321,25 +1230,12 @@
       {
         "url": "uploads/birds/ibijau-gris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 102
+        "birdId": 95
       }
     ]
   },
   {
-    "id": 103,
-    "name": "Ibijau gris",
-    "scientificName": "Nyctibius griseus",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/ibijau-gris/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 103
-      }
-    ]
-  },
-  {
-    "id": 104,
+    "id": 96,
     "name": "Ibis vert",
     "scientificName": "Mesembrinibis cayennensis",
     "imageUrl": null,
@@ -1347,12 +1243,12 @@
       {
         "url": "uploads/birds/ibis-vert/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 104
+        "birdId": 96
       }
     ]
   },
   {
-    "id": 105,
+    "id": 97,
     "name": "Jacamar vert",
     "scientificName": "Galbula galbula",
     "imageUrl": "uploads/birds/jacamar-vert/cover.jpg",
@@ -1360,12 +1256,12 @@
       {
         "url": "uploads/birds/jacamar-vert/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 105
+        "birdId": 97
       }
     ]
   },
   {
-    "id": 106,
+    "id": 98,
     "name": "Jacamar à longue queue",
     "scientificName": "Galbula dea",
     "imageUrl": "uploads/birds/jacamar-a-longue-queue/cover.jpg",
@@ -1373,25 +1269,12 @@
       {
         "url": "uploads/birds/jacamar-a-longue-queue/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 106
+        "birdId": 98
       }
     ]
   },
   {
-    "id": 107,
-    "name": "Jacamar à longue queue",
-    "scientificName": "Galbula dea",
-    "imageUrl": "uploads/birds/jacamar-a-longue-queue/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/jacamar-a-longue-queue/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 107
-      }
-    ]
-  },
-  {
-    "id": 108,
+    "id": 99,
     "name": "Jacarini noir",
     "scientificName": "Volatinia jacarina",
     "imageUrl": "uploads/birds/jacarini-noir/cover.jpg",
@@ -1399,12 +1282,12 @@
       {
         "url": "uploads/birds/jacarini-noir/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 108
+        "birdId": 99
       }
     ]
   },
   {
-    "id": 109,
+    "id": 100,
     "name": "Macagua rieur",
     "scientificName": "Herpetotheres cachinnans",
     "imageUrl": "uploads/birds/macagua-rieur/cover.jpg",
@@ -1412,12 +1295,12 @@
       {
         "url": "uploads/birds/macagua-rieur/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 109
+        "birdId": 100
       }
     ]
   },
   {
-    "id": 110,
+    "id": 101,
     "name": "Manakin auréole",
     "scientificName": "Pipra aureola",
     "imageUrl": "uploads/birds/manakin-aureole/cover.jpg",
@@ -1425,12 +1308,12 @@
       {
         "url": "uploads/birds/manakin-aureole/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 110
+        "birdId": 101
       }
     ]
   },
   {
-    "id": 111,
+    "id": 102,
     "name": "Manakin casse-noisette",
     "scientificName": "Manacus manacus",
     "imageUrl": "uploads/birds/manakin-casse-noisette/cover.jpg",
@@ -1438,12 +1321,12 @@
       {
         "url": "uploads/birds/manakin-casse-noisette/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 111
+        "birdId": 102
       }
     ]
   },
   {
-    "id": 112,
+    "id": 103,
     "name": "Manakin minuscule",
     "scientificName": "Tyranneutes virescens",
     "imageUrl": "uploads/birds/manakin-minuscule/cover.jpg",
@@ -1451,12 +1334,12 @@
       {
         "url": "uploads/birds/manakin-minuscule/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 112
+        "birdId": 103
       }
     ]
   },
   {
-    "id": 113,
+    "id": 104,
     "name": "Manakin tijé",
     "scientificName": "Chiroxiphia pareola",
     "imageUrl": "uploads/birds/manakin-tije/cover.jpg",
@@ -1464,12 +1347,12 @@
       {
         "url": "uploads/birds/manakin-tije/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 113
+        "birdId": 104
       }
     ]
   },
   {
-    "id": 114,
+    "id": 105,
     "name": "Manakin à front blanc",
     "scientificName": "Lepidothrix serena",
     "imageUrl": "uploads/birds/manakin-a-front-blanc/cover.jpg",
@@ -1477,12 +1360,12 @@
       {
         "url": "uploads/birds/manakin-a-front-blanc/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 114
+        "birdId": 105
       }
     ]
   },
   {
-    "id": 115,
+    "id": 106,
     "name": "Manakin à gorge blanche",
     "scientificName": "Corapipo gutturalis",
     "imageUrl": "uploads/birds/manakin-a-gorge-blanche/cover.jpg",
@@ -1490,12 +1373,12 @@
       {
         "url": "uploads/birds/manakin-a-gorge-blanche/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 115
+        "birdId": 106
       }
     ]
   },
   {
-    "id": 116,
+    "id": 107,
     "name": "Manakin à tête blanche",
     "scientificName": "Dixiphia pipra",
     "imageUrl": "uploads/birds/manakin-a-tete-blanche/cover.jpg",
@@ -1503,12 +1386,12 @@
       {
         "url": "uploads/birds/manakin-a-tete-blanche/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 116
+        "birdId": 107
       }
     ]
   },
   {
-    "id": 117,
+    "id": 108,
     "name": "Manakin à tête d'or",
     "scientificName": "Ceratopipra erythrocephala",
     "imageUrl": "uploads/birds/manakin-a-tete-d-or/cover.jpg",
@@ -1516,12 +1399,12 @@
       {
         "url": "uploads/birds/manakin-a-tete-d-or/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 117
+        "birdId": 108
       }
     ]
   },
   {
-    "id": 118,
+    "id": 109,
     "name": "Martin-pêcheur nain",
     "scientificName": "Chloroceryle aenea",
     "imageUrl": null,
@@ -1529,12 +1412,12 @@
       {
         "url": "uploads/birds/martin-pecheur-nain/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 118
+        "birdId": 109
       }
     ]
   },
   {
-    "id": 119,
+    "id": 110,
     "name": "Martin-pêcheur à ventre roux",
     "scientificName": "Megaceryle torquata",
     "imageUrl": null,
@@ -1542,12 +1425,12 @@
       {
         "url": "uploads/birds/martin-pecheur-a-ventre-roux/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 119
+        "birdId": 110
       }
     ]
   },
   {
-    "id": 120,
+    "id": 111,
     "name": "Martinet spinicaude",
     "scientificName": "Chaetura spinicaudus",
     "imageUrl": "uploads/birds/martinet-spinicaude/cover.jpg",
@@ -1555,12 +1438,12 @@
       {
         "url": "uploads/birds/martinet-spinicaude/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 120
+        "birdId": 111
       }
     ]
   },
   {
-    "id": 121,
+    "id": 112,
     "name": "Merle cacao",
     "scientificName": "Turdus fumigatus",
     "imageUrl": null,
@@ -1568,12 +1451,12 @@
       {
         "url": "uploads/birds/merle-cacao/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 121
+        "birdId": 112
       }
     ]
   },
   {
-    "id": 122,
+    "id": 113,
     "name": "Merle leucomèle",
     "scientificName": "Turdus leucomelas",
     "imageUrl": "uploads/birds/merle-leucomele/cover.jpg",
@@ -1581,12 +1464,12 @@
       {
         "url": "uploads/birds/merle-leucomele/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 122
+        "birdId": 113
       }
     ]
   },
   {
-    "id": 123,
+    "id": 114,
     "name": "Merle à col blanc",
     "scientificName": "Turdus albicollis",
     "imageUrl": "uploads/birds/merle-a-col-blanc/cover.jpg",
@@ -1594,12 +1477,12 @@
       {
         "url": "uploads/birds/merle-a-col-blanc/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 123
+        "birdId": 114
       }
     ]
   },
   {
-    "id": 124,
+    "id": 115,
     "name": "Merle à lunettes",
     "scientificName": "Turdus nudigenis",
     "imageUrl": "uploads/birds/merle-a-lunettes/cover.jpg",
@@ -1607,12 +1490,12 @@
       {
         "url": "uploads/birds/merle-a-lunettes/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 124
+        "birdId": 115
       }
     ]
   },
   {
-    "id": 125,
+    "id": 116,
     "name": "Microbate à collier",
     "scientificName": "Microbates collaris",
     "imageUrl": "uploads/birds/microbate-a-collier/cover.jpg",
@@ -1620,12 +1503,12 @@
       {
         "url": "uploads/birds/microbate-a-collier/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 125
+        "birdId": 116
       }
     ]
   },
   {
-    "id": 126,
+    "id": 117,
     "name": "Microbate à long bec",
     "scientificName": "Ramphocaenus melanurus",
     "imageUrl": "uploads/birds/microbate-a-long-bec/cover.jpg",
@@ -1633,12 +1516,12 @@
       {
         "url": "uploads/birds/microbate-a-long-bec/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 126
+        "birdId": 117
       }
     ]
   },
   {
-    "id": 127,
+    "id": 118,
     "name": "Microtyran bifascié",
     "scientificName": "Lophotriccus vitiosus",
     "imageUrl": "uploads/birds/microtyran-bifascie/cover.jpg",
@@ -1646,12 +1529,12 @@
       {
         "url": "uploads/birds/microtyran-bifascie/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 127
+        "birdId": 118
       }
     ]
   },
   {
-    "id": 128,
+    "id": 119,
     "name": "Microtyran casqué",
     "scientificName": "Lophotricus galeatus",
     "imageUrl": null,
@@ -1659,12 +1542,12 @@
       {
         "url": "uploads/birds/microtyran-casque/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 128
+        "birdId": 119
       }
     ]
   },
   {
-    "id": 129,
+    "id": 120,
     "name": "Milan à queue fourchue",
     "scientificName": "Elanoides forficatus",
     "imageUrl": null,
@@ -1672,12 +1555,12 @@
       {
         "url": "uploads/birds/milan-a-queue-fourchue/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 129
+        "birdId": 120
       }
     ]
   },
   {
-    "id": 130,
+    "id": 121,
     "name": "Moqueur des savanes",
     "scientificName": "Mimus gilvus",
     "imageUrl": "uploads/birds/moqueur-des-savanes/cover.jpg",
@@ -1685,12 +1568,12 @@
       {
         "url": "uploads/birds/moqueur-des-savanes/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 130
+        "birdId": 121
       }
     ]
   },
   {
-    "id": 131,
+    "id": 122,
     "name": "Motmot houtouc",
     "scientificName": "Momotus momota",
     "imageUrl": "uploads/birds/motmot-houtouc/cover.jpg",
@@ -1698,12 +1581,12 @@
       {
         "url": "uploads/birds/motmot-houtouc/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 131
+        "birdId": 122
       }
     ]
   },
   {
-    "id": 132,
+    "id": 123,
     "name": "Moucherolle fuligineuse",
     "scientificName": "Cnemotriccus fuscatus",
     "imageUrl": "uploads/birds/moucherolle-fuligineuse/cover.jpg",
@@ -1711,12 +1594,12 @@
       {
         "url": "uploads/birds/moucherolle-fuligineuse/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 132
+        "birdId": 123
       }
     ]
   },
   {
-    "id": 133,
+    "id": 124,
     "name": "Moucherolle pie",
     "scientificName": "Fluvicola pica",
     "imageUrl": "uploads/birds/moucherolle-pie/cover.jpg",
@@ -1724,12 +1607,12 @@
       {
         "url": "uploads/birds/moucherolle-pie/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 133
+        "birdId": 124
       }
     ]
   },
   {
-    "id": 134,
+    "id": 125,
     "name": "Moucherolle à bavette blanche",
     "scientificName": "Contopus albogularis",
     "imageUrl": null,
@@ -1737,12 +1620,12 @@
       {
         "url": "uploads/birds/moucherolle-a-bavette-blanche/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 134
+        "birdId": 125
       }
     ]
   },
   {
-    "id": 135,
+    "id": 126,
     "name": "Myrmidon pygmée",
     "scientificName": "Myrmotherula brachyura",
     "imageUrl": "uploads/birds/myrmidon-pygmee/cover.jpg",
@@ -1750,12 +1633,12 @@
       {
         "url": "uploads/birds/myrmidon-pygmee/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 135
+        "birdId": 126
       }
     ]
   },
   {
-    "id": 136,
+    "id": 127,
     "name": "Myrmidon à flancs blancs",
     "scientificName": "Myrmotherula axillaris",
     "imageUrl": "uploads/birds/myrmidon-a-flancs-blancs/cover.jpg",
@@ -1763,25 +1646,12 @@
       {
         "url": "uploads/birds/myrmidon-a-flancs-blancs/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 136
+        "birdId": 127
       }
     ]
   },
   {
-    "id": 137,
-    "name": "Myrmidon à flancs blancs",
-    "scientificName": "Myrmotherula axillaris",
-    "imageUrl": "uploads/birds/myrmidon-a-flancs-blancs/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/myrmidon-a-flancs-blancs/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 137
-      }
-    ]
-  },
-  {
-    "id": 138,
+    "id": 128,
     "name": "Organiste nègre",
     "scientificName": "Euphonia cayennensis",
     "imageUrl": "uploads/birds/organiste-negre/cover.jpg",
@@ -1789,12 +1659,12 @@
       {
         "url": "uploads/birds/organiste-negre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 138
+        "birdId": 128
       }
     ]
   },
   {
-    "id": 139,
+    "id": 129,
     "name": "Organiste teité",
     "scientificName": "Euphonia violacea",
     "imageUrl": "uploads/birds/organiste-teite/cover.jpg",
@@ -1802,12 +1672,12 @@
       {
         "url": "uploads/birds/organiste-teite/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 139
+        "birdId": 129
       }
     ]
   },
   {
-    "id": 140,
+    "id": 130,
     "name": "Oriole jaune",
     "scientificName": "Icterus nigrogularis",
     "imageUrl": "uploads/birds/oriole-jaune/cover.jpg",
@@ -1815,12 +1685,12 @@
       {
         "url": "uploads/birds/oriole-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 140
+        "birdId": 130
       }
     ]
   },
   {
-    "id": 141,
+    "id": 131,
     "name": "Oriole à épaulettes",
     "scientificName": "Icterus cayanensis",
     "imageUrl": null,
@@ -1828,12 +1698,12 @@
       {
         "url": "uploads/birds/oriole-a-epaulettes/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 141
+        "birdId": 131
       }
     ]
   },
   {
-    "id": 142,
+    "id": 132,
     "name": "Ortalide motmot",
     "scientificName": "Ortalis motmot",
     "imageUrl": "uploads/birds/ortalide-motmot/cover.jpg",
@@ -1841,12 +1711,12 @@
       {
         "url": "uploads/birds/ortalide-motmot/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 142
+        "birdId": 132
       }
     ]
   },
   {
-    "id": 143,
+    "id": 133,
     "name": "Papegeai maillé",
     "scientificName": "Deroptyus accipitrinus",
     "imageUrl": "uploads/birds/papegeai-maille/cover.jpg",
@@ -1854,12 +1724,12 @@
       {
         "url": "uploads/birds/papegeai-maille/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 143
+        "birdId": 133
       }
     ]
   },
   {
-    "id": 144,
+    "id": 134,
     "name": "Paruline des rives",
     "scientificName": "Myiothlypis rivularis",
     "imageUrl": null,
@@ -1867,12 +1737,12 @@
       {
         "url": "uploads/birds/paruline-des-rives/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 144
+        "birdId": 134
       }
     ]
   },
   {
-    "id": 145,
+    "id": 135,
     "name": "Paruline jaune",
     "scientificName": "Setophaga petechia",
     "imageUrl": "uploads/birds/paruline-jaune/cover.jpg",
@@ -1880,12 +1750,12 @@
       {
         "url": "uploads/birds/paruline-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 145
+        "birdId": 135
       }
     ]
   },
   {
-    "id": 146,
+    "id": 136,
     "name": "Petit Piaye",
     "scientificName": "Coccycua minuta",
     "imageUrl": "uploads/birds/petit-piaye/cover.jpg",
@@ -1893,12 +1763,12 @@
       {
         "url": "uploads/birds/petit-piaye/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 146
+        "birdId": 136
       }
     ]
   },
   {
-    "id": 147,
+    "id": 137,
     "name": "Petit-duc choliba",
     "scientificName": "Megascops choliba",
     "imageUrl": null,
@@ -1906,12 +1776,12 @@
       {
         "url": "uploads/birds/petit-duc-choliba/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 147
+        "birdId": 137
       }
     ]
   },
   {
-    "id": 148,
+    "id": 138,
     "name": "Piauhau hurleur",
     "scientificName": "Lipaugus vociferans",
     "imageUrl": "uploads/birds/piauhau-hurleur/cover.jpg",
@@ -1919,12 +1789,12 @@
       {
         "url": "uploads/birds/piauhau-hurleur/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 148
+        "birdId": 138
       }
     ]
   },
   {
-    "id": 149,
+    "id": 139,
     "name": "Piaye écureuil",
     "scientificName": "Piaya cayana",
     "imageUrl": "uploads/birds/piaye-ecureuil/cover.jpg",
@@ -1932,12 +1802,12 @@
       {
         "url": "uploads/birds/piaye-ecureuil/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 149
+        "birdId": 139
       }
     ]
   },
   {
-    "id": 150,
+    "id": 140,
     "name": "Pic de Cassin",
     "scientificName": "Veniliornis cassini",
     "imageUrl": null,
@@ -1945,12 +1815,12 @@
       {
         "url": "uploads/birds/pic-de-cassin/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 150
+        "birdId": 140
       }
     ]
   },
   {
-    "id": 151,
+    "id": 141,
     "name": "Pic de Malherbe",
     "scientificName": "Campephilus melanoleucos",
     "imageUrl": "uploads/birds/pic-de-malherbe/cover.jpg",
@@ -1958,12 +1828,12 @@
       {
         "url": "uploads/birds/pic-de-malherbe/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 151
+        "birdId": 141
       }
     ]
   },
   {
-    "id": 152,
+    "id": 142,
     "name": "Pic jaune",
     "scientificName": "Celeus flavus",
     "imageUrl": "uploads/birds/pic-jaune/cover.jpg",
@@ -1971,12 +1841,12 @@
       {
         "url": "uploads/birds/pic-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 152
+        "birdId": 142
       }
     ]
   },
   {
-    "id": 153,
+    "id": 143,
     "name": "Pic ondé",
     "scientificName": "Celeus undatus",
     "imageUrl": "uploads/birds/pic-onde/cover.jpg",
@@ -1984,12 +1854,12 @@
       {
         "url": "uploads/birds/pic-onde/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 153
+        "birdId": 143
       }
     ]
   },
   {
-    "id": 154,
+    "id": 144,
     "name": "Pic ouentou",
     "scientificName": "Dryocopus lineatus",
     "imageUrl": "uploads/birds/pic-ouentou/cover.jpg",
@@ -1997,12 +1867,12 @@
       {
         "url": "uploads/birds/pic-ouentou/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 154
+        "birdId": 144
       }
     ]
   },
   {
-    "id": 155,
+    "id": 145,
     "name": "Pic passerin",
     "scientificName": "Veniliornis passerinus",
     "imageUrl": "uploads/birds/pic-passerin/cover.jpg",
@@ -2010,12 +1880,12 @@
       {
         "url": "uploads/birds/pic-passerin/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 155
+        "birdId": 145
       }
     ]
   },
   {
-    "id": 156,
+    "id": 146,
     "name": "Pic à chevrons d'or",
     "scientificName": "Melanerpes cruentatus",
     "imageUrl": null,
@@ -2023,12 +1893,12 @@
       {
         "url": "uploads/birds/pic-a-chevrons-d-or/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 156
+        "birdId": 146
       }
     ]
   },
   {
-    "id": 157,
+    "id": 147,
     "name": "Pic à cou rouge",
     "scientificName": "Campephilus rubricollis",
     "imageUrl": null,
@@ -2036,12 +1906,12 @@
       {
         "url": "uploads/birds/pic-a-cou-rouge/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 157
+        "birdId": 147
       }
     ]
   },
   {
-    "id": 158,
+    "id": 148,
     "name": "Picumne frangé",
     "scientificName": "Picumnus cirratus",
     "imageUrl": null,
@@ -2049,12 +1919,12 @@
       {
         "url": "uploads/birds/picumne-frange/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 158
+        "birdId": 148
       }
     ]
   },
   {
-    "id": 159,
+    "id": 149,
     "name": "Pigeon plombé",
     "scientificName": "Patagioenas plumbea",
     "imageUrl": "uploads/birds/pigeon-plombe/cover.jpg",
@@ -2062,12 +1932,12 @@
       {
         "url": "uploads/birds/pigeon-plombe/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 159
+        "birdId": 149
       }
     ]
   },
   {
-    "id": 160,
+    "id": 150,
     "name": "Pigeon ramiret",
     "scientificName": "Patagioenas speciosa",
     "imageUrl": null,
@@ -2075,12 +1945,12 @@
       {
         "url": "uploads/birds/pigeon-ramiret/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 160
+        "birdId": 150
       }
     ]
   },
   {
-    "id": 161,
+    "id": 151,
     "name": "Pigeon rousset",
     "scientificName": "Patagioenas cayennensis",
     "imageUrl": "uploads/birds/pigeon-rousset/cover.jpg",
@@ -2088,12 +1958,12 @@
       {
         "url": "uploads/birds/pigeon-rousset/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 161
+        "birdId": 151
       }
     ]
   },
   {
-    "id": 162,
+    "id": 152,
     "name": "Pigeon vineux",
     "scientificName": "Patagioenas subvinacea",
     "imageUrl": "uploads/birds/pigeon-vineux/cover.jpg",
@@ -2101,12 +1971,12 @@
       {
         "url": "uploads/birds/pigeon-vineux/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 162
+        "birdId": 152
       }
     ]
   },
   {
-    "id": 163,
+    "id": 153,
     "name": "Piprite verdin",
     "scientificName": "Piprites chloris",
     "imageUrl": "uploads/birds/piprite-verdin/cover.jpg",
@@ -2114,12 +1984,12 @@
       {
         "url": "uploads/birds/piprite-verdin/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 163
+        "birdId": 153
       }
     ]
   },
   {
-    "id": 164,
+    "id": 154,
     "name": "Pipromorphe de McConnell",
     "scientificName": "Mionectes macconnelli",
     "imageUrl": "uploads/birds/pipromorphe-de-mcconnell/cover.jpg",
@@ -2127,12 +1997,12 @@
       {
         "url": "uploads/birds/pipromorphe-de-mcconnell/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 164
+        "birdId": 154
       }
     ]
   },
   {
-    "id": 165,
+    "id": 155,
     "name": "Pipromorphe roussâtre",
     "scientificName": "Mionectes oleagineus",
     "imageUrl": null,
@@ -2140,12 +2010,12 @@
       {
         "url": "uploads/birds/pipromorphe-roussatre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 165
+        "birdId": 155
       }
     ]
   },
   {
-    "id": 166,
+    "id": 156,
     "name": "Platyrhynque poliocéphale",
     "scientificName": "Tolmomyias poliocephalus",
     "imageUrl": "uploads/birds/platyrhynque-poliocephale/cover.jpg",
@@ -2153,12 +2023,12 @@
       {
         "url": "uploads/birds/platyrhynque-poliocephale/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 166
+        "birdId": 156
       }
     ]
   },
   {
-    "id": 167,
+    "id": 157,
     "name": "Platyrhynque à cimier blanc",
     "scientificName": "Platyrinchus platyrhynchos",
     "imageUrl": null,
@@ -2166,12 +2036,12 @@
       {
         "url": "uploads/birds/platyrhynque-a-cimier-blanc/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 167
+        "birdId": 157
       }
     ]
   },
   {
-    "id": 168,
+    "id": 158,
     "name": "Pénélope marail",
     "scientificName": "Penelope marail",
     "imageUrl": null,
@@ -2179,12 +2049,12 @@
       {
         "url": "uploads/birds/penelope-marail/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 168
+        "birdId": 158
       }
     ]
   },
   {
-    "id": 169,
+    "id": 159,
     "name": "Quiscale merle",
     "scientificName": "Quiscalus lugubris",
     "imageUrl": "uploads/birds/quiscale-merle/cover.jpg",
@@ -2192,12 +2062,12 @@
       {
         "url": "uploads/birds/quiscale-merle/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 169
+        "birdId": 159
       }
     ]
   },
   {
-    "id": 170,
+    "id": 160,
     "name": "Râle de Cayenne",
     "scientificName": "Aramides cajaneus",
     "imageUrl": null,
@@ -2205,12 +2075,12 @@
       {
         "url": "uploads/birds/rale-de-cayenne/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 170
+        "birdId": 160
       }
     ]
   },
   {
-    "id": 171,
+    "id": 161,
     "name": "Râle grêle",
     "scientificName": "Laterallus exilis",
     "imageUrl": null,
@@ -2218,12 +2088,12 @@
       {
         "url": "uploads/birds/rale-grele/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 171
+        "birdId": 161
       }
     ]
   },
   {
-    "id": 172,
+    "id": 162,
     "name": "Râle kiolo",
     "scientificName": "Anurolimnas viridis",
     "imageUrl": "uploads/birds/rale-kiolo/cover.jpg",
@@ -2231,12 +2101,12 @@
       {
         "url": "uploads/birds/rale-kiolo/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 172
+        "birdId": 162
       }
     ]
   },
   {
-    "id": 173,
+    "id": 163,
     "name": "Saltator ardoisé",
     "scientificName": "Saltator grossus",
     "imageUrl": null,
@@ -2244,12 +2114,12 @@
       {
         "url": "uploads/birds/saltator-ardoise/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 173
+        "birdId": 163
       }
     ]
   },
   {
-    "id": 174,
+    "id": 164,
     "name": "Saltator des grands bois",
     "scientificName": "Saltator maximus",
     "imageUrl": "uploads/birds/saltator-des-grands-bois/cover.jpg",
@@ -2257,12 +2127,12 @@
       {
         "url": "uploads/birds/saltator-des-grands-bois/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 174
+        "birdId": 164
       }
     ]
   },
   {
-    "id": 175,
+    "id": 165,
     "name": "Saltator gris",
     "scientificName": "Saltator coerulescens",
     "imageUrl": "uploads/birds/saltator-gris/cover.jpg",
@@ -2270,12 +2140,12 @@
       {
         "url": "uploads/birds/saltator-gris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 175
+        "birdId": 165
       }
     ]
   },
   {
-    "id": 176,
+    "id": 166,
     "name": "Smaragdan oreillard",
     "scientificName": "Vireolanius leucotis",
     "imageUrl": "uploads/birds/smaragdan-oreillard/cover.jpg",
@@ -2283,12 +2153,12 @@
       {
         "url": "uploads/birds/smaragdan-oreillard/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 176
+        "birdId": 166
       }
     ]
   },
   {
-    "id": 177,
+    "id": 167,
     "name": "Sourciroux mélodieux",
     "scientificName": "Cyclarhis gujanensis",
     "imageUrl": "uploads/birds/sourciroux-melodieux/cover.jpg",
@@ -2296,25 +2166,12 @@
       {
         "url": "uploads/birds/sourciroux-melodieux/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 177
+        "birdId": 167
       }
     ]
   },
   {
-    "id": 178,
-    "name": "Sourciroux mélodieux",
-    "scientificName": "Cyclarhis gujanensis",
-    "imageUrl": "uploads/birds/sourciroux-melodieux/cover.jpg",
-    "records": [
-      {
-        "url": "uploads/birds/sourciroux-melodieux/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 178
-      }
-    ]
-  },
-  {
-    "id": 179,
+    "id": 168,
     "name": "Sporophile petit-louis",
     "scientificName": "Sporophila minuta",
     "imageUrl": null,
@@ -2322,12 +2179,12 @@
       {
         "url": "uploads/birds/sporophile-petit-louis/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 179
+        "birdId": 168
       }
     ]
   },
   {
-    "id": 180,
+    "id": 169,
     "name": "Sporophile à ailes blanches",
     "scientificName": "Sporophila americana",
     "imageUrl": "uploads/birds/sporophile-a-ailes-blanches/cover.jpg",
@@ -2335,12 +2192,12 @@
       {
         "url": "uploads/birds/sporophile-a-ailes-blanches/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 180
+        "birdId": 169
       }
     ]
   },
   {
-    "id": 181,
+    "id": 170,
     "name": "Sturnelle des prés",
     "scientificName": "Sturnella magna",
     "imageUrl": "uploads/birds/sturnelle-des-pres/cover.jpg",
@@ -2348,12 +2205,12 @@
       {
         "url": "uploads/birds/sturnelle-des-pres/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 181
+        "birdId": 170
       }
     ]
   },
   {
-    "id": 182,
+    "id": 171,
     "name": "Sturnelle militaire",
     "scientificName": "Sturnella militaris",
     "imageUrl": "uploads/birds/sturnelle-militaire/cover.jpg",
@@ -2361,12 +2218,12 @@
       {
         "url": "uploads/birds/sturnelle-militaire/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 182
+        "birdId": 171
       }
     ]
   },
   {
-    "id": 183,
+    "id": 172,
     "name": "Sucrier à ventre jaune",
     "scientificName": "Coereba flaveola",
     "imageUrl": "uploads/birds/sucrier-a-ventre-jaune/cover.jpg",
@@ -2374,12 +2231,12 @@
       {
         "url": "uploads/birds/sucrier-a-ventre-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 183
+        "birdId": 172
       }
     ]
   },
   {
-    "id": 184,
+    "id": 173,
     "name": "Synallaxe albane",
     "scientificName": "Synallaxis albescens",
     "imageUrl": null,
@@ -2387,12 +2244,12 @@
       {
         "url": "uploads/birds/synallaxe-albane/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 184
+        "birdId": 173
       }
     ]
   },
   {
-    "id": 185,
+    "id": 174,
     "name": "Synallaxe de Cayenne",
     "scientificName": "Synallaxis guianensis",
     "imageUrl": null,
@@ -2400,12 +2257,12 @@
       {
         "url": "uploads/birds/synallaxe-de-cayenne/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 185
+        "birdId": 174
       }
     ]
   },
   {
-    "id": 186,
+    "id": 175,
     "name": "Synallaxe à gorge jaune",
     "scientificName": "Certhiaxis cinnamomeus",
     "imageUrl": null,
@@ -2413,12 +2270,12 @@
       {
         "url": "uploads/birds/synallaxe-a-gorge-jaune/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 186
+        "birdId": 175
       }
     ]
   },
   {
-    "id": 187,
+    "id": 176,
     "name": "Tamatia tacheté",
     "scientificName": "Bucco tamatia",
     "imageUrl": null,
@@ -2426,12 +2283,12 @@
       {
         "url": "uploads/birds/tamatia-tachete/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 187
+        "birdId": 176
       }
     ]
   },
   {
-    "id": 188,
+    "id": 177,
     "name": "Tangara des palmiers",
     "scientificName": "Thraupis palmarum",
     "imageUrl": "uploads/birds/tangara-des-palmiers/cover.jpg",
@@ -2439,12 +2296,12 @@
       {
         "url": "uploads/birds/tangara-des-palmiers/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 188
+        "birdId": 177
       }
     ]
   },
   {
-    "id": 189,
+    "id": 178,
     "name": "Tangara mordoré",
     "scientificName": "Lanio fulvus",
     "imageUrl": "uploads/birds/tangara-mordore/cover.jpg",
@@ -2452,12 +2309,12 @@
       {
         "url": "uploads/birds/tangara-mordore/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 189
+        "birdId": 178
       }
     ]
   },
   {
-    "id": 190,
+    "id": 179,
     "name": "Tangara orangé",
     "scientificName": "Piranga flava haemalea",
     "imageUrl": null,
@@ -2465,12 +2322,12 @@
       {
         "url": "uploads/birds/tangara-orange/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 190
+        "birdId": 179
       }
     ]
   },
   {
-    "id": 191,
+    "id": 180,
     "name": "Tangara à bec d'argent",
     "scientificName": "Ramphocelus carbo",
     "imageUrl": "uploads/birds/tangara-a-bec-d-argent/cover.jpg",
@@ -2478,12 +2335,12 @@
       {
         "url": "uploads/birds/tangara-a-bec-d-argent/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 191
+        "birdId": 180
       }
     ]
   },
   {
-    "id": 192,
+    "id": 181,
     "name": "Tangara à coiffe noire",
     "scientificName": "Nemosia pileata",
     "imageUrl": null,
@@ -2491,12 +2348,12 @@
       {
         "url": "uploads/birds/tangara-a-coiffe-noire/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 192
+        "birdId": 181
       }
     ]
   },
   {
-    "id": 193,
+    "id": 182,
     "name": "Tangara à crête fauve",
     "scientificName": "Tachyphonus surinamus",
     "imageUrl": null,
@@ -2504,12 +2361,12 @@
       {
         "url": "uploads/birds/tangara-a-crete-fauve/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 193
+        "birdId": 182
       }
     ]
   },
   {
-    "id": 194,
+    "id": 183,
     "name": "Tangara à galons blancs",
     "scientificName": "Tachyphonus rufus",
     "imageUrl": "uploads/birds/tangara-a-galons-blancs/cover.jpg",
@@ -2517,12 +2374,12 @@
       {
         "url": "uploads/birds/tangara-a-galons-blancs/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 194
+        "birdId": 183
       }
     ]
   },
   {
-    "id": 195,
+    "id": 184,
     "name": "Tangara évêque",
     "scientificName": "Thraupis episcopus",
     "imageUrl": "uploads/birds/tangara-eveque/cover.jpg",
@@ -2530,12 +2387,12 @@
       {
         "url": "uploads/birds/tangara-eveque/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 195
+        "birdId": 184
       }
     ]
   },
   {
-    "id": 196,
+    "id": 185,
     "name": "Tinamou cendré",
     "scientificName": "Crypturellus cinereus",
     "imageUrl": "uploads/birds/tinamou-cendre/cover.jpg",
@@ -2543,12 +2400,12 @@
       {
         "url": "uploads/birds/tinamou-cendre/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 196
+        "birdId": 185
       }
     ]
   },
   {
-    "id": 197,
+    "id": 186,
     "name": "Tinamou soui",
     "scientificName": "Crypturellus soui",
     "imageUrl": "uploads/birds/tinamou-soui/cover.jpg",
@@ -2556,12 +2413,12 @@
       {
         "url": "uploads/birds/tinamou-soui/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 197
+        "birdId": 186
       }
     ]
   },
   {
-    "id": 198,
+    "id": 187,
     "name": "Tinamou soui",
     "scientificName": "Crypturellus soui, cht2",
     "imageUrl": "uploads/birds/tinamou-soui/cover.jpg",
@@ -2569,12 +2426,12 @@
       {
         "url": "uploads/birds/tinamou-soui/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 198
+        "birdId": 187
       }
     ]
   },
   {
-    "id": 199,
+    "id": 188,
     "name": "Tinamou varié",
     "scientificName": "Crypturellus variegatus",
     "imageUrl": "uploads/birds/tinamou-varie/cover.jpg",
@@ -2582,25 +2439,12 @@
       {
         "url": "uploads/birds/tinamou-varie/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 199
+        "birdId": 188
       }
     ]
   },
   {
-    "id": 200,
-    "name": "Tinamou varié",
-    "scientificName": "Crypturellus variegatus",
-    "imageUrl": null,
-    "records": [
-      {
-        "url": "uploads/birds/tinamou-varie/gepog.mp3",
-        "source": "GEPOG",
-        "birdId": 200
-      }
-    ]
-  },
-  {
-    "id": 201,
+    "id": 189,
     "name": "Tocro de Guyane",
     "scientificName": "Odontophorus guianensis",
     "imageUrl": null,
@@ -2608,12 +2452,12 @@
       {
         "url": "uploads/birds/tocro-de-guyane/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 201
+        "birdId": 189
       }
     ]
   },
   {
-    "id": 202,
+    "id": 190,
     "name": "Todirostre familier",
     "scientificName": "Todirostrum cinereum",
     "imageUrl": null,
@@ -2621,12 +2465,12 @@
       {
         "url": "uploads/birds/todirostre-familier/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 202
+        "birdId": 190
       }
     ]
   },
   {
-    "id": 203,
+    "id": 191,
     "name": "Todirostre peint",
     "scientificName": "Todirostrum pictum",
     "imageUrl": "uploads/birds/todirostre-peint/cover.jpg",
@@ -2634,12 +2478,12 @@
       {
         "url": "uploads/birds/todirostre-peint/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 203
+        "birdId": 191
       }
     ]
   },
   {
-    "id": 204,
+    "id": 192,
     "name": "Todirostre tacheté",
     "scientificName": "Todirostrum maculatum",
     "imageUrl": "uploads/birds/todirostre-tachete/cover.jpg",
@@ -2647,12 +2491,12 @@
       {
         "url": "uploads/birds/todirostre-tachete/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 204
+        "birdId": 192
       }
     ]
   },
   {
-    "id": 205,
+    "id": 193,
     "name": "Todirostre zostérops",
     "scientificName": "Hemitriccus zosterops",
     "imageUrl": "uploads/birds/todirostre-zosterops/cover.jpg",
@@ -2660,12 +2504,12 @@
       {
         "url": "uploads/birds/todirostre-zosterops/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 205
+        "birdId": 193
       }
     ]
   },
   {
-    "id": 206,
+    "id": 194,
     "name": "Todirostre à front gris",
     "scientificName": "Poecilotriccus fumifrons",
     "imageUrl": null,
@@ -2673,12 +2517,12 @@
       {
         "url": "uploads/birds/todirostre-a-front-gris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 206
+        "birdId": 194
       }
     ]
   },
   {
-    "id": 207,
+    "id": 195,
     "name": "Tohi silencieux",
     "scientificName": "Arremon taciturnus",
     "imageUrl": "uploads/birds/tohi-silencieux/cover.jpg",
@@ -2686,12 +2530,12 @@
       {
         "url": "uploads/birds/tohi-silencieux/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 207
+        "birdId": 195
       }
     ]
   },
   {
-    "id": 208,
+    "id": 196,
     "name": "Toucan ariel",
     "scientificName": "Ramphastos vitellinus",
     "imageUrl": "uploads/birds/toucan-ariel/cover.jpg",
@@ -2699,12 +2543,12 @@
       {
         "url": "uploads/birds/toucan-ariel/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 208
+        "birdId": 196
       }
     ]
   },
   {
-    "id": 209,
+    "id": 197,
     "name": "Toucan à bec rouge",
     "scientificName": "Ramphastos tucanus",
     "imageUrl": "uploads/birds/toucan-a-bec-rouge/cover.jpg",
@@ -2712,12 +2556,12 @@
       {
         "url": "uploads/birds/toucan-a-bec-rouge/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 209
+        "birdId": 197
       }
     ]
   },
   {
-    "id": 210,
+    "id": 198,
     "name": "Toucanet koulik",
     "scientificName": "Selenidera piperivora",
     "imageUrl": "uploads/birds/toucanet-koulik/cover.jpg",
@@ -2725,12 +2569,12 @@
       {
         "url": "uploads/birds/toucanet-koulik/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 210
+        "birdId": 198
       }
     ]
   },
   {
-    "id": 211,
+    "id": 199,
     "name": "Troglodyte arada",
     "scientificName": "Cyphorhinus arada",
     "imageUrl": null,
@@ -2738,12 +2582,12 @@
       {
         "url": "uploads/birds/troglodyte-arada/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 211
+        "birdId": 199
       }
     ]
   },
   {
-    "id": 212,
+    "id": 200,
     "name": "Troglodyte coraya",
     "scientificName": "Pheugopedius coraya",
     "imageUrl": "uploads/birds/troglodyte-coraya/cover.jpg",
@@ -2751,12 +2595,12 @@
       {
         "url": "uploads/birds/troglodyte-coraya/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 212
+        "birdId": 200
       }
     ]
   },
   {
-    "id": 213,
+    "id": 201,
     "name": "Troglodyte familier",
     "scientificName": "Troglodytes aedon",
     "imageUrl": "uploads/birds/troglodyte-familier/cover.jpg",
@@ -2764,12 +2608,12 @@
       {
         "url": "uploads/birds/troglodyte-familier/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 213
+        "birdId": 201
       }
     ]
   },
   {
-    "id": 214,
+    "id": 202,
     "name": "Troglodyte à face pâle",
     "scientificName": "Cantorchilus leucotis",
     "imageUrl": "uploads/birds/troglodyte-a-face-pale/cover.jpg",
@@ -2777,12 +2621,12 @@
       {
         "url": "uploads/birds/troglodyte-a-face-pale/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 214
+        "birdId": 202
       }
     ]
   },
   {
-    "id": 215,
+    "id": 203,
     "name": "Troglodyte à poitrine blanche",
     "scientificName": "Henicorhina leucosticta",
     "imageUrl": null,
@@ -2790,12 +2634,12 @@
       {
         "url": "uploads/birds/troglodyte-a-poitrine-blanche/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 215
+        "birdId": 203
       }
     ]
   },
   {
-    "id": 216,
+    "id": 204,
     "name": "Trogon aurore",
     "scientificName": "Trogon rufus",
     "imageUrl": "uploads/birds/trogon-aurore/cover.jpg",
@@ -2803,12 +2647,12 @@
       {
         "url": "uploads/birds/trogon-aurore/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 216
+        "birdId": 204
       }
     ]
   },
   {
-    "id": 217,
+    "id": 205,
     "name": "Trogon rosalba",
     "scientificName": "Trogon collaris",
     "imageUrl": "uploads/birds/trogon-rosalba/cover.jpg",
@@ -2816,12 +2660,12 @@
       {
         "url": "uploads/birds/trogon-rosalba/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 217
+        "birdId": 205
       }
     ]
   },
   {
-    "id": 218,
+    "id": 206,
     "name": "Trogon violacé",
     "scientificName": "Trogon violaceus",
     "imageUrl": "uploads/birds/trogon-violace/cover.jpg",
@@ -2829,12 +2673,12 @@
       {
         "url": "uploads/birds/trogon-violace/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 218
+        "birdId": 206
       }
     ]
   },
   {
-    "id": 219,
+    "id": 207,
     "name": "Trogon à queue blanche",
     "scientificName": "Trogon viridis",
     "imageUrl": "uploads/birds/trogon-a-queue-blanche/cover.jpg",
@@ -2842,12 +2686,12 @@
       {
         "url": "uploads/birds/trogon-a-queue-blanche/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 219
+        "birdId": 207
       }
     ]
   },
   {
-    "id": 220,
+    "id": 208,
     "name": "Trogon à queue noire",
     "scientificName": "Trogon melanurus",
     "imageUrl": "uploads/birds/trogon-a-queue-noire/cover.jpg",
@@ -2855,12 +2699,12 @@
       {
         "url": "uploads/birds/trogon-a-queue-noire/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 220
+        "birdId": 208
       }
     ]
   },
   {
-    "id": 221,
+    "id": 209,
     "name": "Tyran de Cayenne",
     "scientificName": "Myiozetetes cayanensis",
     "imageUrl": "uploads/birds/tyran-de-cayenne/cover.jpg",
@@ -2868,12 +2712,12 @@
       {
         "url": "uploads/birds/tyran-de-cayenne/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 221
+        "birdId": 209
       }
     ]
   },
   {
-    "id": 222,
+    "id": 210,
     "name": "Tyran de Pelzeln",
     "scientificName": "Conopias parvus",
     "imageUrl": "uploads/birds/tyran-de-pelzeln/cover.jpg",
@@ -2881,12 +2725,12 @@
       {
         "url": "uploads/birds/tyran-de-pelzeln/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 222
+        "birdId": 210
       }
     ]
   },
   {
-    "id": 223,
+    "id": 211,
     "name": "Tyran de Wied",
     "scientificName": "Myiarchus tyrannulus",
     "imageUrl": "uploads/birds/tyran-de-wied/cover.jpg",
@@ -2894,12 +2738,12 @@
       {
         "url": "uploads/birds/tyran-de-wied/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 223
+        "birdId": 211
       }
     ]
   },
   {
-    "id": 224,
+    "id": 212,
     "name": "Tyran féroce",
     "scientificName": "Myiarchus ferox",
     "imageUrl": null,
@@ -2907,12 +2751,12 @@
       {
         "url": "uploads/birds/tyran-feroce/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 224
+        "birdId": 212
       }
     ]
   },
   {
-    "id": 225,
+    "id": 213,
     "name": "Tyran licteur",
     "scientificName": "Pitangus lictor",
     "imageUrl": null,
@@ -2920,12 +2764,12 @@
       {
         "url": "uploads/birds/tyran-licteur/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 225
+        "birdId": 213
       }
     ]
   },
   {
-    "id": 226,
+    "id": 214,
     "name": "Tyran mélancolique",
     "scientificName": "Tyrannus melancholicus",
     "imageUrl": "uploads/birds/tyran-melancolique/cover.jpg",
@@ -2933,12 +2777,12 @@
       {
         "url": "uploads/birds/tyran-melancolique/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 226
+        "birdId": 214
       }
     ]
   },
   {
-    "id": 227,
+    "id": 215,
     "name": "Tyran pirate",
     "scientificName": "Legatus leucophaius",
     "imageUrl": "uploads/birds/tyran-pirate/cover.jpg",
@@ -2946,12 +2790,12 @@
       {
         "url": "uploads/birds/tyran-pirate/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 227
+        "birdId": 215
       }
     ]
   },
   {
-    "id": 228,
+    "id": 216,
     "name": "Tyran pirate",
     "scientificName": "Legatus leucophaius, cri",
     "imageUrl": null,
@@ -2959,12 +2803,12 @@
       {
         "url": "uploads/birds/tyran-pirate/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 228
+        "birdId": 216
       }
     ]
   },
   {
-    "id": 229,
+    "id": 217,
     "name": "Tyran pitangua",
     "scientificName": "Megarynchus pitangua",
     "imageUrl": "uploads/birds/tyran-pitangua/cover.jpg",
@@ -2972,12 +2816,12 @@
       {
         "url": "uploads/birds/tyran-pitangua/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 229
+        "birdId": 217
       }
     ]
   },
   {
-    "id": 230,
+    "id": 218,
     "name": "Tyran quiquivi",
     "scientificName": "Pitangus sulphuratus",
     "imageUrl": "uploads/birds/tyran-quiquivi/cover.jpg",
@@ -2985,12 +2829,12 @@
       {
         "url": "uploads/birds/tyran-quiquivi/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 230
+        "birdId": 218
       }
     ]
   },
   {
-    "id": 231,
+    "id": 219,
     "name": "Tyranneau casqué",
     "scientificName": "Lophotriccus galeatus",
     "imageUrl": "uploads/birds/tyranneau-casque/cover.jpg",
@@ -2998,12 +2842,12 @@
       {
         "url": "uploads/birds/tyranneau-casque/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 231
+        "birdId": 219
       }
     ]
   },
   {
-    "id": 232,
+    "id": 220,
     "name": "Tyranneau frangé",
     "scientificName": "Inezia caudata",
     "imageUrl": "uploads/birds/tyranneau-frange/cover.jpg",
@@ -3011,12 +2855,12 @@
       {
         "url": "uploads/birds/tyranneau-frange/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 232
+        "birdId": 220
       }
     ]
   },
   {
-    "id": 233,
+    "id": 221,
     "name": "Tyranneau minute",
     "scientificName": "Ornithion inerme",
     "imageUrl": null,
@@ -3024,12 +2868,12 @@
       {
         "url": "uploads/birds/tyranneau-minute/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 233
+        "birdId": 221
       }
     ]
   },
   {
-    "id": 234,
+    "id": 222,
     "name": "Tyranneau passegris",
     "scientificName": "Camptostoma obsoletum",
     "imageUrl": "uploads/birds/tyranneau-passegris/cover.jpg",
@@ -3037,12 +2881,12 @@
       {
         "url": "uploads/birds/tyranneau-passegris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 234
+        "birdId": 222
       }
     ]
   },
   {
-    "id": 235,
+    "id": 223,
     "name": "Tyranneau souris",
     "scientificName": "Phaeomyias murina",
     "imageUrl": "uploads/birds/tyranneau-souris/cover.jpg",
@@ -3050,12 +2894,12 @@
       {
         "url": "uploads/birds/tyranneau-souris/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 235
+        "birdId": 223
       }
     ]
   },
   {
-    "id": 236,
+    "id": 224,
     "name": "Tyranneau vif",
     "scientificName": "Zimmerius acer",
     "imageUrl": "uploads/birds/tyranneau-vif/cover.jpg",
@@ -3063,12 +2907,12 @@
       {
         "url": "uploads/birds/tyranneau-vif/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 236
+        "birdId": 224
       }
     ]
   },
   {
-    "id": 237,
+    "id": 225,
     "name": "Tétéma colma",
     "scientificName": "Formicarius colma",
     "imageUrl": "uploads/birds/tetema-colma/cover.jpg",
@@ -3076,12 +2920,12 @@
       {
         "url": "uploads/birds/tetema-colma/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 237
+        "birdId": 225
       }
     ]
   },
   {
-    "id": 238,
+    "id": 226,
     "name": "Tétéma coq-de-bois",
     "scientificName": "Formicarius analis",
     "imageUrl": "uploads/birds/tetema-coq-de-bois/cover.jpg",
@@ -3089,12 +2933,12 @@
       {
         "url": "uploads/birds/tetema-coq-de-bois/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 238
+        "birdId": 226
       }
     ]
   },
   {
-    "id": 239,
+    "id": 227,
     "name": "Viréo aux yeux rouges (comme chivi)",
     "scientificName": "Vireo olivaceus",
     "imageUrl": "uploads/birds/vireo-aux-yeux-rouges-comme-chivi/cover.jpg",
@@ -3102,12 +2946,12 @@
       {
         "url": "uploads/birds/vireo-aux-yeux-rouges-comme-chivi/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 239
+        "birdId": 227
       }
     ]
   },
   {
-    "id": 240,
+    "id": 228,
     "name": "Viréon à tête cendrée",
     "scientificName": "Hylophilus pectoralis",
     "imageUrl": "uploads/birds/vireon-a-tete-cendree/cover.jpg",
@@ -3115,7 +2959,7 @@
       {
         "url": "uploads/birds/vireon-a-tete-cendree/gepog.mp3",
         "source": "GEPOG",
-        "birdId": 240
+        "birdId": 228
       }
     ]
   }
