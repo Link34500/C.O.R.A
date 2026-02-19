@@ -25,7 +25,7 @@ export default async function Datas() {
       icon: <BirdIcon {...iconProps} />,
     },
     {
-      description: "Espèce enregistrer",
+      description: "Nombre d'enregistrement",
       data: await prisma.record.count(),
       icon: <HeadphonesIcon {...iconProps} />,
     },

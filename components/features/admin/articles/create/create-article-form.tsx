@@ -1,58 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import { createArticle } from "@/lib/actions/articles";
 import TiptapEditor from "@/components/ui/editor";
+import { useActionState, useState } from "react";
 
 export default function CreateArticleForm() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const payload = {
-      title,
-      content,
-      publishedAt: new Date().toISOString(),
-    };
-
-    console.log("Données prêtes pour l'API :", payload);
-    // Ici : await fetch('/api/articles', { method: 'POST', body: JSON.stringify(payload) })
-  };
+  // useActionState retourne [state, formAction, isPending]
+  const [state, formAction, isPending] = useActionState(createArticle, {
+    success: false,
+    error: null,
+    message: "",
+  });
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-6 p-4">
-      <div className="form-control w-full">
-        <label className="label">
-          <span className="label-text font-bold text-lg">
-            Titre de l'article
-          </span>
-        </label>
-        <input
-          type="text"
-          placeholder="Entrez un titre percutant"
-          className="input input-bordered w-full text-xl"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-      </div>
+    <form action={formAction} className="max-w-4xl mx-auto space-y-6 p-4">
+      {state.error && <div className="text-red-500">{state.error}</div>}
+      {state.success && <div className="text-green-500">{state.message}</div>}
 
-      <div className="form-control w-full">
-        <label className="label">
-          <span className="label-text font-bold text-lg">
-            Contenu de l'article
-          </span>
-        </label>
-        {/* On passe la fonction setContent à notre éditeur */}
-        <TiptapEditor content={content} onChange={setContent} />
-      </div>
+      <input
+        type="text"
+        name="title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        required
+      />
 
-      <div className="flex justify-end">
-        <button type="submit" className="btn btn-primary btn-lg shadow-lg">
-          Enregistrer l'article
-        </button>
-      </div>
+      <input type="hidden" name="content" value={content} />
+
+      <TiptapEditor content={content} onChange={setContent} />
+
+      <button type="submit" disabled={isPending}>
+        {isPending ? "Création..." : "Sauvegarder le brouillon"}
+      </button>
     </form>
   );
 }

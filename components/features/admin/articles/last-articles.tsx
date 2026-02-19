@@ -27,5 +27,8 @@ export default async function LastArticles() {
         />
       )}
     </Section>
+    <Section>
+      
+    </Section>
   );
 }
