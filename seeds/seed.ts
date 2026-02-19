@@ -8,37 +8,30 @@ const connectionString = `${process.env.DATABASE_URL}`;
 
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
-
 async function main() {
-  console.log("🚀 Début de l'importation massive...");
-
+  // Accès aux données (gestion du format d'import JSON)
+  console.log("Début de l'importation...");
   const birdsArray = (birds as any).default || birds;
-
-  const operations = birdsArray.map((bird: any) =>
-    prisma.bird.create({
+  for (const bird of birdsArray) {
+    await prisma.bird.create({
       data: {
         name: bird.name,
         scientificName: bird.scientificName,
         imageUrl: bird.imageUrl ? "/cdn/" + bird.imageUrl : null,
         records: {
           create: bird.records.map((record: any) => ({
-            url: "/cdn/" + record.url,
-            source: record.source as Source,
+            url: record.url,
+            source: record.source as Source, // Cast pour matcher l'Enum
           })),
         },
       },
-    }),
-  );
-  await prisma.$transaction(operations);
-
-  console.log(
-    `✅ Import terminé ! ${birdsArray.length} oiseaux importés en une seule fois.`,
-  );
+    });
+  }
+  console.log(`Import terminé ! ${birdsArray.length} oiseaux importés.`);
 }
-
 main()
   .catch((e) => {
-    console.error("❌ Erreur lors de l'import :", e);
+    console.error(e);
     process.exit(1);
   })
   .finally(async () => {
