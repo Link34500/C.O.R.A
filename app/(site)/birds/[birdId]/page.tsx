@@ -19,7 +19,7 @@ export default async function BirdPage({
       <div className="w-full flex justify-center p-8 bg-base-200 gap-x-48 flex-wrap">
         {bird.imageUrl ? (
           <Image
-            src={"/" + bird.imageUrl}
+            src={bird.imageUrl}
             alt={`Image d'un ${bird.name}`}
             className="rounded-xl"
             width={512}

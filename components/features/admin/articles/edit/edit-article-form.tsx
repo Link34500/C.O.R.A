@@ -1,27 +1,40 @@
 "use client";
 
-import { createArticle } from "@/lib/actions/articles";
+import { updateArticle } from "@/lib/actions/articles";
 import Editor from "@/components/ui/editor";
-import { useActionState, useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
+import { Article } from "@/generated/prisma/client";
 
-export default function CreateArticleForm() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+interface EditArticleFormProps {
+  article: Article;
+}
 
-  const [state, formAction, isPending] = useActionState(createArticle, {
+export default function EditArticleForm({ article }: EditArticleFormProps) {
+  const [title, setTitle] = useState(article.title);
+  const [content, setContent] = useState(article.content);
+
+  const [state, formAction, isPending] = useActionState(updateArticle, {
     success: false,
     error: null,
     message: "",
   });
 
+  // Mettre à jour le contenu quand l'article change
+  useEffect(() => {
+    setTitle(article.title);
+    setContent(article.content);
+  }, [article]);
+
   return (
     <div className="max-w-4xl mx-auto p-6">
       <Card className="p-6">
         <form action={formAction} className="space-y-6">
+          <input type="hidden" name="articleId" value={article.id} />
+
           {state.error && (
             <div className="alert alert-error">
               <span>{state.error}</span>
@@ -71,11 +84,18 @@ export default function CreateArticleForm() {
               {isPending ? (
                 <>
                   <span className="loading loading-spinner loading-sm"></span>
-                  Création en cours...
+                  Mise à jour en cours...
                 </>
               ) : (
-                "Sauvegarder le brouillon"
+                "Mettre à jour l'article"
               )}
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => window.history.back()}
+            >
+              Annuler
             </Button>
           </div>
         </form>

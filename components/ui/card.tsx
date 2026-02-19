@@ -64,11 +64,11 @@ export function CardTitle({
   children,
   className,
   ...props
-}: React.ComponentProps<"h2">) {
+}: React.ComponentProps<"div">) {
   return (
-    <h2 className={cn("card-title", className)} {...props}>
+    <div className={cn("card-title", className)} {...props}>
       {children}
-    </h2>
+    </div>
   );
 }
 
