@@ -81,7 +81,7 @@ export default function Editor({
         placeholder,
       }),
       CharacterCount.configure({
-        maxLength,
+        limit: maxLength,
       }),
     ],
     content,
@@ -93,7 +93,7 @@ export default function Editor({
       attributes: {
         class: "prose prose-sm max-w-none focus:outline-none min-h-[300px] p-4",
       },
-      handlePaste: (view, event) => {
+      handlePaste: (view, event, _slice) => {
         const items = Array.from(event.clipboardData?.items || []);
         const images = items.filter((item) => item.type.startsWith("image/"));
 
@@ -104,7 +104,7 @@ export default function Editor({
             if (file) {
               const url = await handleImageUpload(file);
               if (url && editor) {
-                editor.chain().focus().setImage({ src: url }).run();
+                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
               }
             }
           });
@@ -115,7 +115,7 @@ export default function Editor({
       handleDrop: (view, event, _slice, moved) => {
         if (!moved && event.dataTransfer?.files) {
           const images = Array.from(event.dataTransfer.files).filter((file) =>
-            file.type.startsWith("image/"),
+            file.type.startsWith("image/")
           );
 
           if (images.length > 0) {
@@ -123,7 +123,7 @@ export default function Editor({
             images.forEach(async (file) => {
               const url = await handleImageUpload(file);
               if (url && editor) {
-                editor.chain().focus().setImage({ src: url }).run();
+                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
               }
             });
             return true;
@@ -261,7 +261,7 @@ export default function Editor({
             if (file) {
               const url = await handleImageUpload(file);
               if (url) {
-                editor.chain().focus().setImage({ src: url }).run();
+                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
               }
             }
           }}
@@ -293,14 +293,8 @@ export default function Editor({
           </div>
         )}
       </div>
-      <div className="border-t border-base-300 px-4 py-2 bg-base-100 text-xs text-base-content/60 flex justify-between">
-        <span>
-          {editor.storage.characterCount?.characters || 0} / {maxLength}{" "}
-          caractères
-        </span>
-        <span className="text-xs opacity-60">
-          Glissez une image ou Ctrl+V pour l'insérer
-        </span>
+      <div className="text-xs text-gray-500 mt-2 px-4 pb-2">
+        {editor.storage.characterCount.characters()} / {maxLength} caractères
       </div>
     </div>
   );
