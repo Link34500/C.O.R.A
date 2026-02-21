@@ -264,9 +264,8 @@ export default function RecordsManagementClient({
                         </a>
                         <Button
                           variant="ghost"
-                          size="sm"
                           onClick={() => handleDelete(record.id)}
-                          className="text-error hover:bg-error/10"
+                          className="text-error hover:bg-error/10 h-8"
                           title="Supprimer l'enregistrement"
                         >
                           <Trash2 className="w-4 h-4" />

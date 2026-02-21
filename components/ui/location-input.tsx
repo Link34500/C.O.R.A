@@ -32,7 +32,7 @@ export function LocationInput({
   const handleLatChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     setLatInput(val);
-    
+
     if (val === "" && lngInput === "") {
       onChange(null);
       setError("");
@@ -44,7 +44,7 @@ export function LocationInput({
   const handleLngChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     setLngInput(val);
-    
+
     if (val === "" && latInput === "") {
       onChange(null);
       setError("");
@@ -97,7 +97,7 @@ export function LocationInput({
         enableHighAccuracy: true,
         timeout: 10000,
         maximumAge: 0,
-      }
+      },
     );
   };
 
@@ -138,37 +138,31 @@ export function LocationInput({
           />
         </div>
       </div>
-      
+
       <div className="flex gap-2">
         <Button
           variant="outline"
-          size="sm"
           onClick={getCurrentLocation}
           disabled={disabled}
-          className="text-xs"
+          className="text-xs h-8"
         >
           <Crosshair className="w-3 h-3 mr-1" />
           Ma position
         </Button>
-        
+
         {(latInput || lngInput) && (
           <Button
             variant="ghost"
-            size="sm"
             onClick={handleClear}
             disabled={disabled}
-            className="text-xs"
+            className="text-xs h-8"
           >
             Effacer
           </Button>
         )}
       </div>
 
-      {error && (
-        <div className="text-xs text-error mt-1">
-          {error}
-        </div>
-      )}
+      {error && <div className="text-xs text-error mt-1">{error}</div>}
 
       {value && !error && (
         <div className="text-xs text-base-content/60 mt-1 flex items-center">

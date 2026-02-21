@@ -178,10 +178,9 @@ export function FileUpload({
             </div>
             <Button
               variant="ghost"
-              size="sm"
               onClick={handleRemove}
               disabled={disabled}
-            >
+              className="h-8"
               <X className="w-4 h-4" />
             </Button>
           </div>
