@@ -10,9 +10,11 @@ export default async function CreateRecordPage() {
       id: true,
       name: true,
       scientificName: true,
-      imageUrl: true
+      imageUrl: true,
+      date: true,
+      description: true,
     },
-    orderBy: { name: "asc" }
+    orderBy: { name: "asc" },
   });
 
   return (
