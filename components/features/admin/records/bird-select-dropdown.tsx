@@ -77,7 +77,7 @@ export function BirdSelectDropdown({
         <div className="flex items-center gap-2 flex-1 min-w-0">
           {selectedBird ? (
             <>
-              <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 bg-base-200">
+              <div className="w-6 h-6 rounded-full overflow-hidden shrink-0 bg-base-200">
                 {selectedBird.imageUrl ? (
                   <img
                     src={selectedBird.imageUrl}
@@ -105,14 +105,14 @@ export function BirdSelectDropdown({
             <span className="text-base-content/60">{placeholder}</span>
           )}
         </div>
-        <ChevronDown className="w-4 h-4 ml-2 flex-shrink-0" />
+        <ChevronDown className="w-4 h-4 shrink-0" />
       </Button>
 
       {isOpen && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-base-100 border border-base-300 rounded-lg shadow-lg z-50 max-h-64 overflow-hidden">
           <div className="p-2 border-b border-base-300">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-base-content/50" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-base-content/50 shrink-0" />
               <Input
                 placeholder="Rechercher un oiseau..."
                 value={search}
@@ -140,7 +140,7 @@ export function BirdSelectDropdown({
                     `}
                     onClick={() => handleBirdSelect(bird.id)}
                   >
-                    <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 bg-base-200">
+                    <div className="w-6 h-6 rounded-full overflow-hidden shrink-0 bg-base-200">
                       {bird.imageUrl ? (
                         <img
                           src={bird.imageUrl}
@@ -164,7 +164,7 @@ export function BirdSelectDropdown({
                       )}
                     </div>
                     {selectedBirdId === bird.id && (
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                      <Check className="w-4 h-4 text-primary shrink-0" />
                     )}
                   </button>
                 ))}
@@ -177,7 +177,7 @@ export function BirdSelectDropdown({
               <Button
                 variant="ghost"
                 onClick={handleClear}
-                className="w-full text-xs h-8"
+                className="w-full text-xs h-8 shrink-0"
               >
                 Effacer la sélection
               </Button>

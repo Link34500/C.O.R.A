@@ -204,8 +204,8 @@ export default function RecordsManagementClient({
                     <td className="font-mono text-sm">#{record.id}</td>
                     <td>
                       {record.bird ? (
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 bg-base-200">
+                        <div className="flex items-center gap-2 shrink-0">
+                          <div className="w-6 h-6 rounded-full overflow-hidden shrink-0 bg-base-200">
                             {record.bird.imageUrl ? (
                               <img
                                 src={record.bird.imageUrl}

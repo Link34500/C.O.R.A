@@ -29,9 +29,10 @@ export function FileUpload({
   const [error, setError] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const defaultAccept = type === "image" 
-    ? "image/jpeg,image/png,image/gif,image/webp"
-    : "audio/mpeg,audio/mp3,audio/wav";
+  const defaultAccept =
+    type === "image"
+      ? "image/jpeg,image/png,image/gif,image/webp"
+      : "audio/mpeg,audio/mp3,audio/wav";
 
   const handleDrag = (e: React.DragEvent) => {
     e.preventDefault();
@@ -73,10 +74,14 @@ export function FileUpload({
 
     // Validate file type
     const acceptedTypes = accept ? accept.split(",") : defaultAccept.split(",");
-    const isAccepted = acceptedTypes.some(type => file.type.includes(type.replace("*", "")));
-    
+    const isAccepted = acceptedTypes.some((type) =>
+      file.type.includes(type.replace("*", "")),
+    );
+
     if (!isAccepted) {
-      setError(`Type de fichier non autorisé. Formats acceptés: ${acceptedTypes.join(", ")}`);
+      setError(
+        `Type de fichier non autorisé. Formats acceptés: ${acceptedTypes.join(", ")}`,
+      );
       return;
     }
 
@@ -104,7 +109,7 @@ export function FileUpload({
     const k = 1024;
     const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return Math.round(bytes / Math.pow(k, i) * 100) / 100 + " " + sizes[i];
+    return Math.round((bytes / Math.pow(k, i)) * 100) / 100 + " " + sizes[i];
   };
 
   return (
@@ -141,7 +146,9 @@ export function FileUpload({
             </div>
             <div>
               <p className="text-lg font-medium">
-                {dragActive ? "Lâchez le fichier ici" : `Téléverser un ${type === "image" ? "image" : "fichier audio"}`}
+                {dragActive
+                  ? "Lâchez le fichier ici"
+                  : `Téléverser un ${type === "image" ? "image" : "fichier audio"}`}
               </p>
               <p className="text-sm text-base-content/60 mt-1">
                 Glissez-déposez ou cliquez pour sélectionner
@@ -181,6 +188,7 @@ export function FileUpload({
               onClick={handleRemove}
               disabled={disabled}
               className="h-8"
+            >
               <X className="w-4 h-4" />
             </Button>
           </div>
