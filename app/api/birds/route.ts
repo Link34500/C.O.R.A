@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { Prisma } from "@prisma/client";
 
 export async function GET(request: NextRequest) {
   try {
@@ -17,11 +18,16 @@ export async function GET(request: NextRequest) {
     const finalTake = searchParams.has("page") ? take : legacyTake;
 
     // Construire la clause where
-    const where = search
+    const where: Prisma.BirdWhereInput = search
       ? {
           OR: [
-            { name: { contains: search, mode: "insensitive" } },
-            { scientificName: { contains: search, mode: "insensitive" } },
+            { name: { contains: search, mode: Prisma.QueryMode.insensitive } },
+            {
+              scientificName: {
+                contains: search,
+                mode: Prisma.QueryMode.insensitive,
+              },
+            },
           ],
         }
       : {};
