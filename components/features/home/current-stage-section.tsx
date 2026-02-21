@@ -36,34 +36,20 @@ export default function CurrentStageSection() {
           viewport={{ once: true }}
         >
           <motion.p variants={fadeInUp}>
-            Le protocole méthodologique a été établi et validé. Le site web est
-            opérationnel et permet la consultation des données collectées ainsi
-            que la publication d'articles mensuels sur l'avancement du projet.
+            Le capteur a enfin été reçu, nous avons pu débuter notre étude.
           </motion.p>
           <motion.p variants={fadeInUp}>
-            Le capteur acoustique est actuellement en cours d'acquisition. Trois
-            points d'écoute ont été identifiés pour le déploiement initial :
-          </motion.p>
-          <motion.ul
-            className="list-disc list-inside space-y-2 ml-4"
-            variants={staggerContainer}
-          >
-            <motion.li variants={fadeInUp}>Site de Vidal</motion.li>
-            <motion.li variants={fadeInUp}>Sentier de Montabo</motion.li>
-            <motion.li variants={fadeInUp}>
-              Un troisième site potentiel en cours d'évaluation
-            </motion.li>
-          </motion.ul>
-          <motion.p variants={fadeInUp}>
-            La phase d'analyse des données terrain débutera après l'acquisition
-            des premiers enregistrements. Un algorithme de classification (ML)
-            sera développé pour identifier les espèces d'oiseaux et ses
-            résultats seront publiés sur le site. Le taux de reconnaissance
-            attendu est relativement faible pour l'instant, autour de 30 à 50 %
-            pour le modèle finalisé.
+            Nous avons actuellement réalisé deux écoutes, une à Montabo et une
+            sur le sentier de Lamirande.
           </motion.p>
           <motion.p variants={fadeInUp}>
-            Les résultats seront publiés progressivement sur la plateforme au
+            Nous avons commencé le nettoyage et l'analyse des données avec les
+            données récupérées sur le site de Montabo cependant nous avons
+            rencontré un problème sur la qualité des données qui contenait
+            beaucoup de bruits parasites et donc elle n'était pas exploitable.
+          </motion.p>
+          <motion.p variants={fadeInUp}>
+            Les résultats seront publiés très prochainement sur la plateforme au
             fur et à mesure de leur validation.
           </motion.p>
         </motion.div>

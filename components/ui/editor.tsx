@@ -41,23 +41,51 @@ export default function Editor({
   const handleImageUpload = useCallback(async (file: File) => {
     setIsUploading(true);
     try {
+      console.log("📤 Uploading file:", {
+        name: file.name,
+        size: file.size,
+        type: file.type,
+      });
+
       const formData = new FormData();
       formData.append("file", file);
+
+      console.log("📦 FormData content:");
+      for (const [key, value] of formData.entries()) {
+        console.log(
+          `  ${key}:`,
+          value instanceof File
+            ? {
+                name: value.name,
+                size: value.size,
+                type: value.type,
+              }
+            : value,
+        );
+      }
 
       const response = await fetch("/api/upload", {
         method: "POST",
         body: formData,
       });
 
+      console.log("📡 Response status:", response.status);
+      console.log(
+        "📡 Response headers:",
+        Object.fromEntries(response.headers.entries()),
+      );
+
       if (!response.ok) {
         const errorData = await response.json();
+        console.error("❌ Error response:", errorData);
         throw new Error(errorData.error || "Upload failed");
       }
 
       const { url } = await response.json();
+      console.log("✅ Upload successful:", url);
       return url;
     } catch (error) {
-      console.error("Upload error:", error);
+      console.error("❌ Upload error:", error);
       return null;
     } finally {
       setIsUploading(false);
@@ -104,7 +132,11 @@ export default function Editor({
             if (file) {
               const url = await handleImageUpload(file);
               if (url && editor) {
-                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
+                editor
+                  .chain()
+                  .focus()
+                  .insertContent({ type: "image", attrs: { src: url } })
+                  .run();
               }
             }
           });
@@ -115,7 +147,7 @@ export default function Editor({
       handleDrop: (view, event, _slice, moved) => {
         if (!moved && event.dataTransfer?.files) {
           const images = Array.from(event.dataTransfer.files).filter((file) =>
-            file.type.startsWith("image/")
+            file.type.startsWith("image/"),
           );
 
           if (images.length > 0) {
@@ -123,7 +155,11 @@ export default function Editor({
             images.forEach(async (file) => {
               const url = await handleImageUpload(file);
               if (url && editor) {
-                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
+                editor
+                  .chain()
+                  .focus()
+                  .insertContent({ type: "image", attrs: { src: url } })
+                  .run();
               }
             });
             return true;
@@ -261,7 +297,11 @@ export default function Editor({
             if (file) {
               const url = await handleImageUpload(file);
               if (url) {
-                editor.chain().focus().insertContent({ type: "image", attrs: { src: url } }).run();
+                editor
+                  .chain()
+                  .focus()
+                  .insertContent({ type: "image", attrs: { src: url } })
+                  .run();
               }
             }
           }}

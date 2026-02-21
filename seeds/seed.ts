@@ -20,7 +20,7 @@ async function main() {
         imageUrl: bird.imageUrl ? "/cdn/" + bird.imageUrl : null,
         records: {
           create: bird.records.map((record: any) => ({
-            url: record.url,
+            url: "/cdn/" + record.url,
             source: record.source as Source, // Cast pour matcher l'Enum
           })),
         },

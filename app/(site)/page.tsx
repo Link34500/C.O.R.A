@@ -9,7 +9,6 @@ import ArticleSection from "@/components/features/home/article-section";
 import BirdSoundSection from "@/components/features/home/birdsound-section";
 import ApplicationAndImpactSection from "@/components/features/home/application-and-impacts-section";
 import LimitsSection from "@/components/features/home/limits-section";
-import PerspectiveSection from "@/components/features/home/perspectives-section";
 
 export default async function HomePage() {
   const birdSounds = await prisma.bird.findMany({
@@ -22,7 +21,7 @@ export default async function HomePage() {
     {
       title: "Choix du terrain d’étude",
       description:
-        "Les enregistrements sont réalisés sur les sites de Vidal et du sentier de Montabo, deux zones présentant une biodiversité intéressante en Guyane et adaptées à l’observation acoustique des oiseaux.",
+        "Les enregistrements sont réalisés sur le sentier de Lamirande, une zone présentant une biodiversité intéressante en Guyane et adaptées à l’observation acoustique des oiseaux.",
     },
     {
       title: "Collecte des enregistrements",
@@ -44,9 +43,9 @@ export default async function HomePage() {
   const steps = [
     { title: "Protocole", completed: true },
     { title: "Site web", completed: true },
-    { title: "Matériel", completed: false },
-    { title: "Vidal", completed: false },
-    { title: "Montabo", completed: false },
+    { title: "Matériel", completed: true },
+    { title: "Montabo", completed: true },
+    { title: "Lamirande", completed: true },
     { title: "Analyse", completed: false },
     { title: "Exploitation", completed: false },
     { title: "Publication", completed: false },
@@ -67,7 +66,6 @@ export default async function HomePage() {
       <CurrentStageSection />
       <ApplicationAndImpactSection />
       <LimitsSection />
-      <PerspectiveSection />
       <ArticleSection />
 
       <BirdSoundSection birdSounds={birdSounds} />

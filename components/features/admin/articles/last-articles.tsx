@@ -40,7 +40,7 @@ export default function LastArticles({
           {articles.map((article) => (
             <div key={article.id} className="space-y-4">
               <CardArticle article={article} />
-              <form className="flex gap-2" action={formAction}>
+              <form className="flex flex-wrap gap-2" action={formAction}>
                 <input type="hidden" name="articleId" value={article.id} />
                 <Button variant="secondary" name="action" value="unpublish">
                   Remettre dans les brouillons
