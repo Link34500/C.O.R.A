@@ -16,9 +16,11 @@ export default async function RecordsManagementPage() {
             id: true,
             name: true,
             scientificName: true,
-            imageUrl: true
-          }
-        }
+            imageUrl: true,
+            date: true,
+            description: true,
+          },
+        },
       },
       orderBy: { id: "desc" },
     }),
@@ -31,9 +33,11 @@ export default async function RecordsManagementPage() {
       id: true,
       name: true,
       scientificName: true,
-      imageUrl: true
+      imageUrl: true,
+      date: true,
+      description: true,
     },
-    orderBy: { name: "asc" }
+    orderBy: { name: "asc" },
   });
 
   return (
@@ -46,7 +50,8 @@ export default async function RecordsManagementPage() {
           </p>
         </div>
         <div className="text-sm text-base-content/70">
-          {total} enregistrement{total > 1 ? "s" : ""} trouvé{total > 1 ? "s" : ""}
+          {total} enregistrement{total > 1 ? "s" : ""} trouvé
+          {total > 1 ? "s" : ""}
         </div>
       </div>
 
