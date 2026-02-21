@@ -224,12 +224,12 @@ export default function BirdManagementClient({
         </div>
 
         {/* Description */}
-        <div className="form-control">
+        <div className="form-control flex flex-col gap-2">
           <label className="label">
             <span className="label-text font-medium">Description</span>
           </label>
           <textarea
-            className="textarea textarea-bordered h-24"
+            className="textarea textarea-bordered min-h-24 w-full resize-none p-4"
             value={formData.description}
             onChange={(e) => handleInputChange("description", e.target.value)}
             placeholder="Description de l'oiseau..."
