@@ -8,22 +8,48 @@ import { z } from "zod";
 const articleSchema = z.object({
   title: z.string().min(1, "Le titre est requis"),
   content: z.string().min(1, "Le contenu est requis"),
+  thumbnailUrl: z.string().nullable().optional(),
 });
 
-export async function createArticle(prevState: any, formData: FormData) {
+// Fonction utilitaire pour extraire et valider les données
+async function extractAndValidateArticleData(
+  formData: FormData,
+  articleId?: number,
+) {
   const title = formData.get("title");
   const content = formData.get("content");
+  const thumbnailUrl = formData.get("thumbnailUrl") as string;
+
+  // Convertir string vide en null
+  const finalThumbnailUrl = thumbnailUrl === "" ? null : thumbnailUrl;
 
   try {
-    const validated = articleSchema.parse({ title, content });
+    const validated = articleSchema.parse({
+      title,
+      content,
+      thumbnailUrl: finalThumbnailUrl,
+    });
+
+    return validated;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function createArticle(prevState: any, formData: FormData) {
+  try {
+    const validated = await extractAndValidateArticleData(formData);
 
     const article = await prisma.article.create({
       data: {
         title: validated.title,
         content: validated.content,
         published: false,
+        thumbnailUrl: validated.thumbnailUrl,
       },
     });
+
+    revalidatePath("/admin/articles");
     await redirect("/admin/articles");
     return {
       success: true,
@@ -49,17 +75,16 @@ export async function createArticle(prevState: any, formData: FormData) {
 
 export async function updateArticle(prevState: any, formData: FormData) {
   const articleId = Number(formData.get("articleId") as string);
-  const title = formData.get("title");
-  const content = formData.get("content");
 
   try {
-    const validated = articleSchema.parse({ title, content });
+    const validated = await extractAndValidateArticleData(formData, articleId);
 
     const article = await prisma.article.update({
       where: { id: articleId },
       data: {
         title: validated.title,
         content: validated.content,
+        thumbnailUrl: validated.thumbnailUrl,
       },
     });
 

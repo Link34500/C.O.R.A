@@ -1,8 +1,8 @@
 import { BirdNotFound } from "@/components/ui/bird-not-found";
-import { SubTitle, Title } from "@/components/ui/text";
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import BirdDetails from "@/components/features/birds/bird-details";
 
 export default async function BirdPage({
   params,
@@ -10,10 +10,20 @@ export default async function BirdPage({
   params: Promise<{ birdId: string }>;
 }) {
   const { birdId } = await params;
-  const bird = await prisma.bird.findUnique({ where: { id: Number(birdId) } });
+  const bird = await prisma.bird.findUnique({
+    where: { id: Number(birdId) },
+    include: {
+      location: true,
+      records: {
+        orderBy: { source: "asc" },
+      },
+    },
+  });
+
   if (!bird) {
     return notFound();
   }
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="w-full flex justify-center p-8 bg-base-200 gap-x-48 flex-wrap">
@@ -28,13 +38,7 @@ export default async function BirdPage({
         ) : (
           <BirdNotFound />
         )}
-        <div>
-          <h2 className="text-4xl font-bold">{bird.name}</h2>
-          <span className="italic text-foreground/50">
-            {bird.scientificName}
-          </span>
-          <div></div>
-        </div>
+        <BirdDetails bird={bird} />
       </div>
     </div>
   );

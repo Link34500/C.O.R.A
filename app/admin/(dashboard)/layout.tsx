@@ -3,7 +3,7 @@ import { redirect, unauthorized } from "next/navigation";
 import { PropsWithChildren } from "react";
 import Navbar from "@/components/layout/admin-navbar";
 import Sidebar from "@/components/layout/admin-sidebar";
-import { FileIcon, HomeIcon, TextIcon } from "lucide-react";
+import { Bird, FileIcon, HomeIcon, TextIcon } from "lucide-react";
 import { User } from "@/generated/prisma/client";
 import {
   LayoutDashboard,
@@ -33,20 +33,15 @@ export const sidebarLinks = [
   },
 
   {
-    icon: <BarChart3 size={18} />,
-    label: "Statistiques",
-    href: "/admin/stats",
+    icon: <Bird size={18} />,
+    label: "Oiseaux",
+    href: "/admin/birds",
   },
 
   {
     icon: <Users size={18} />,
     label: "Admins",
     href: "/admin/admins",
-  },
-  {
-    icon: <Settings size={18} />,
-    label: "Paramètres",
-    href: "/admin/settings",
   },
 ];
 
