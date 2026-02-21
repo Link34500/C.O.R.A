@@ -29,16 +29,21 @@ export function BirdSelectDropdown({
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const filtered = birds.filter(bird =>
-      bird.name.toLowerCase().includes(search.toLowerCase()) ||
-      (bird.scientificName && bird.scientificName.toLowerCase().includes(search.toLowerCase()))
+    const filtered = birds.filter(
+      (bird) =>
+        bird.name.toLowerCase().includes(search.toLowerCase()) ||
+        (bird.scientificName &&
+          bird.scientificName.toLowerCase().includes(search.toLowerCase())),
     );
     setFilteredBirds(filtered);
   }, [search, birds]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -47,7 +52,7 @@ export function BirdSelectDropdown({
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedBird = birds.find(bird => bird.id === selectedBirdId);
+  const selectedBird = birds.find((bird) => bird.id === selectedBirdId);
 
   const handleBirdSelect = (birdId: number | null) => {
     onBirdSelect(birdId);
@@ -171,9 +176,8 @@ export function BirdSelectDropdown({
             <div className="p-2 border-t border-base-300">
               <Button
                 variant="ghost"
-                size="sm"
                 onClick={handleClear}
-                className="w-full text-xs"
+                className="w-full text-xs h-8"
               >
                 Effacer la sélection
               </Button>
