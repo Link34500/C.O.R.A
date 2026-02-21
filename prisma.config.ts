@@ -11,4 +11,7 @@ export default defineConfig({
   datasource: {
     url: env("DATABASE_URL"),
   },
+  engine: {
+    timeout: 30000, // 30 secondes au lieu de 10
+  },
 });
