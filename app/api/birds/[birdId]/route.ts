@@ -3,13 +3,13 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { birdId: string } },
+  { params }: { params: Promise<{ birdId: string }> },
 ) {
   try {
-    const { birdId: birdIdParam } = await params;
-    const birdId = parseInt(birdIdParam);
+    const { birdId } = await params;
+    const birdIdNum = parseInt(birdId);
 
-    if (isNaN(birdId)) {
+    if (isNaN(birdIdNum)) {
       return NextResponse.json(
         { error: "ID d'oiseau invalide" },
         { status: 400 },
@@ -17,7 +17,7 @@ export async function GET(
     }
 
     const bird = await prisma.bird.findUnique({
-      where: { id: birdId },
+      where: { id: birdIdNum },
       include: {
         location: true,
         records: {
@@ -42,13 +42,13 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { birdId: string } },
+  { params }: { params: Promise<{ birdId: string }> },
 ) {
   try {
-    const { birdId: birdIdParam } = await params;
-    const birdId = parseInt(birdIdParam);
+    const { birdId } = await params;
+    const birdIdNum = parseInt(birdId);
 
-    if (isNaN(birdId)) {
+    if (isNaN(birdIdNum)) {
       return NextResponse.json(
         { error: "ID d'oiseau invalide" },
         { status: 400 },
@@ -59,7 +59,7 @@ export async function PUT(
 
     // Vérifier que l'oiseau existe
     const existingBird = await prisma.bird.findUnique({
-      where: { id: birdId },
+      where: { id: birdIdNum },
     });
 
     if (!existingBird) {
@@ -83,18 +83,18 @@ export async function PUT(
       if (body.location === null) {
         // Supprimer la localisation existante
         await prisma.location.deleteMany({
-          where: { birdId },
+          where: { birdId: birdIdNum },
         });
       } else if (body.location.latitude && body.location.longitude) {
         // Mettre à jour ou créer la localisation
         await prisma.location.upsert({
-          where: { birdId },
+          where: { birdId: birdIdNum },
           update: {
             latitude: body.location.latitude,
             longitude: body.location.longitude,
           },
           create: {
-            birdId,
+            birdId: birdIdNum,
             latitude: body.location.latitude,
             longitude: body.location.longitude,
           },
@@ -104,7 +104,7 @@ export async function PUT(
 
     // Mettre à jour l'oiseau
     const updatedBird = await prisma.bird.update({
-      where: { id: birdId },
+      where: { id: birdIdNum },
       data: updateData,
       include: {
         location: true,
@@ -126,13 +126,13 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { birdId: string } },
+  { params }: { params: Promise<{ birdId: string }> },
 ) {
   try {
-    const { birdId: birdIdParam } = await params;
-    const birdId = parseInt(birdIdParam);
+    const { birdId } = await params;
+    const birdIdNum = parseInt(birdId);
 
-    if (isNaN(birdId)) {
+    if (isNaN(birdIdNum)) {
       return NextResponse.json(
         { error: "ID d'oiseau invalide" },
         { status: 400 },
@@ -141,7 +141,7 @@ export async function DELETE(
 
     // Vérifier que l'oiseau existe
     const existingBird = await prisma.bird.findUnique({
-      where: { id: birdId },
+      where: { id: birdIdNum },
     });
 
     if (!existingBird) {
@@ -150,7 +150,7 @@ export async function DELETE(
 
     // Supprimer l'oiseau (la localisation et les enregistrements seront supprimés en cascade)
     await prisma.bird.delete({
-      where: { id: birdId },
+      where: { id: birdIdNum },
     });
 
     return NextResponse.json({ message: "Oiseau supprimé avec succès" });

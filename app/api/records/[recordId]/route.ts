@@ -4,13 +4,13 @@ import { Source } from "@/generated/prisma/client";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { recordId: string } },
+  { params }: { params: Promise<{ recordId: string }> },
 ) {
   try {
-    const { recordId: recordIdParam } = await params;
-    const recordId = parseInt(recordIdParam);
+    const { recordId } = await params;
+    const recordIdNum = parseInt(recordId);
 
-    if (isNaN(recordId)) {
+    if (isNaN(recordIdNum)) {
       return NextResponse.json(
         { error: "ID d'enregistrement invalide" },
         { status: 400 },
@@ -18,7 +18,7 @@ export async function GET(
     }
 
     const record = await prisma.record.findUnique({
-      where: { id: recordId },
+      where: { id: recordIdNum },
       include: {
         bird: {
           select: {
@@ -50,13 +50,13 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { recordId: string } },
+  { params }: { params: Promise<{ recordId: string }> },
 ) {
   try {
-    const { recordId: recordIdParam } = await params;
-    const recordId = parseInt(recordIdParam);
+    const { recordId } = await params;
+    const recordIdNum = parseInt(recordId);
 
-    if (isNaN(recordId)) {
+    if (isNaN(recordIdNum)) {
       return NextResponse.json(
         { error: "ID d'enregistrement invalide" },
         { status: 400 },
@@ -67,7 +67,7 @@ export async function PUT(
 
     // Vérifier que l'enregistrement existe
     const existingRecord = await prisma.record.findUnique({
-      where: { id: recordId },
+      where: { id: recordIdNum },
     });
 
     if (!existingRecord) {
@@ -112,7 +112,7 @@ export async function PUT(
 
     // Mettre à jour l'enregistrement
     const updatedRecord = await prisma.record.update({
-      where: { id: recordId },
+      where: { id: recordIdNum },
       data: updateData,
       include: {
         bird: {
@@ -138,13 +138,13 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { recordId: string } },
+  { params }: { params: Promise<{ recordId: string }> },
 ) {
   try {
-    const { recordId: recordIdParam } = await params;
-    const recordId = parseInt(recordIdParam);
+    const { recordId } = await params;
+    const recordIdNum = parseInt(recordId);
 
-    if (isNaN(recordId)) {
+    if (isNaN(recordIdNum)) {
       return NextResponse.json(
         { error: "ID d'enregistrement invalide" },
         { status: 400 },
@@ -153,7 +153,7 @@ export async function DELETE(
 
     // Vérifier que l'enregistrement existe
     const existingRecord = await prisma.record.findUnique({
-      where: { id: recordId },
+      where: { id: recordIdNum },
     });
 
     if (!existingRecord) {
@@ -165,7 +165,7 @@ export async function DELETE(
 
     // Supprimer l'enregistrement
     await prisma.record.delete({
-      where: { id: recordId },
+      where: { id: recordIdNum },
     });
 
     return NextResponse.json({
